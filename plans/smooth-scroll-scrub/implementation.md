@@ -65,7 +65,7 @@ ffmpeg -i public/video/drone-entrance.mp4 -vf "fps=18,scale=1920:-1" -quality 75
 
 #### Step 2: Rewrite VideoHero with Canvas + Image Sequence
 
-- [ ] Replace the entire contents of `components/VideoHero.tsx` with:
+- [x] Replace the entire contents of `components/VideoHero.tsx` with:
 
 ```tsx
 "use client";
@@ -290,13 +290,13 @@ export default function VideoHero() {
 > **IMPORTANT:** After extracting frames, update `FRAME_COUNT` at the top of the file to match the actual number of frames extracted. Run `ls public/images/hero-frames/ | wc -l` to get the count.
 
 ##### Step 2 Verification Checklist
-- [ ] `npm run dev` starts without errors
-- [ ] First frame appears on page load (no blank canvas)
-- [ ] Scrolling through the hero section shows smooth frame-by-frame animation
-- [ ] Title fades out in the first 20% of scroll
-- [ ] Tagline fades in at 15-35% and fades out at 60-80%
-- [ ] No visible frame gaps or jumps during fast scrolling
-- [ ] Canvas covers the full viewport without distortion
+- [x] `npm run dev` starts without errors
+- [x] First frame appears on page load (no blank canvas)
+- [x] Scrolling through the hero section shows smooth frame-by-frame animation
+- [x] Title fades out in the first 20% of scroll
+- [x] Tagline fades in at 15-35% and fades out at 60-80%
+- [x] No visible frame gaps or jumps during fast scrolling
+- [x] Canvas covers the full viewport without distortion
 
 #### Step 2 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
