@@ -766,7 +766,7 @@ export default function Home() {
 
 #### Step 5: Spaces — Accordion Image Slider for Bedrooms
 
-- [ ] Create `components/Spaces.tsx`:
+- [x] Create `components/Spaces.tsx`:
 
 ```tsx
 "use client";
@@ -999,7 +999,7 @@ export default function Spaces() {
 }
 ```
 
-- [ ] Update `app/page.tsx`:
+- [x] Update `app/page.tsx`:
 
 ```tsx
 import Navbar from "@/components/Navbar";
@@ -1028,14 +1028,14 @@ export default function Home() {
 ```
 
 ##### Step 5 Verification Checklist
-- [ ] Desktop: 5 narrow vertical image strips side by side
-- [ ] Hovering a strip expands it smoothly (flex: 1 → 4) revealing room name, floor, and features
-- [ ] Room names appear vertically on collapsed strips
-- [ ] Expanded state shows second image (e.g., `blue2.jpg` instead of `blue1.jpg`)
-- [ ] Mobile: rooms stack vertically, tap to expand/collapse
-- [ ] Mobile: expanded room shows taller aspect ratio with features
-- [ ] All 5 rooms render: Blue, Green, Grey, Brown, Lime
-- [ ] No layout shift or horizontal overflow
+- [x] Desktop: 5 narrow vertical image strips side by side
+- [x] Hovering a strip expands it smoothly (flex: 1 → 4) revealing room name, floor, and features
+- [x] Room names appear vertically on collapsed strips
+- [x] Expanded state shows second image (e.g., `blue2.jpg` instead of `blue1.jpg`)
+- [x] Mobile: rooms stack vertically, tap to expand/collapse
+- [x] Mobile: expanded room shows taller aspect ratio with features
+- [x] All 5 rooms render: Blue, Green, Grey, Brown, Lime
+- [x] No layout shift or horizontal overflow
 
 #### Step 5 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
