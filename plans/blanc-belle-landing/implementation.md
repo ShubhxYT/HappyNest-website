@@ -1044,7 +1044,7 @@ export default function Home() {
 
 #### Step 6: Living & Dining — Zig-Zag Layout
 
-- [ ] Create `components/LivingAreas.tsx`:
+- [x] Create `components/LivingAreas.tsx`:
 
 ```tsx
 "use client";
@@ -1164,7 +1164,7 @@ export default function LivingAreas() {
 }
 ```
 
-- [ ] Update `app/page.tsx`:
+- [x] Update `app/page.tsx`:
 
 ```tsx
 import Navbar from "@/components/Navbar";
@@ -1195,12 +1195,12 @@ export default function Home() {
 ```
 
 ##### Step 6 Verification Checklist
-- [ ] Three blocks: Living Area (image left), Dining (image right), Lounge (image left)
-- [ ] Zig-zag pattern — text and image alternate sides on desktop
-- [ ] Mobile: all collapse to single column (image on top, text below)
-- [ ] Images fade in from their respective side, text fades in from below
-- [ ] Photos load correctly: `sofa-ground.jpg`, `main-dining.jpg`, `tt-table-sofa-up.jpg`
-- [ ] Rounded corners on all images
+- [x] Three blocks: Living Area (image left), Dining (image right), Lounge (image left)
+- [x] Zig-zag pattern — text and image alternate sides on desktop
+- [x] Mobile: all collapse to single column (image on top, text below)
+- [x] Images fade in from their respective side, text fades in from below
+- [x] Photos load correctly: `sofa-ground.jpg`, `main-dining.jpg`, `tt-table-sofa-up.jpg`
+- [x] Rounded corners on all images
 
 #### Step 6 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.

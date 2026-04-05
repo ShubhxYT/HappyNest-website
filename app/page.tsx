@@ -4,6 +4,7 @@ import VideoHero from "@/components/VideoHero";
 import About from "@/components/About";
 import StatsBar from "@/components/StatsBar";
 import Spaces from "@/components/Spaces";
+import LivingAreas from "@/components/LivingAreas";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <About />
         <StatsBar />
         <Spaces />
+        <LivingAreas />
         {/* Spacer for scroll test */}
         <section className="min-h-[50vh] bg-cream" />
       </main>
