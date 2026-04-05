@@ -366,7 +366,7 @@ export default function Home() {
 
 #### Step 3: Video Hero — GSAP Scroll-Scrubbed Drone
 
-- [ ] Create `components/VideoHero.tsx`:
+- [x] Create `components/VideoHero.tsx`:
 
 ```tsx
 "use client";
@@ -514,7 +514,7 @@ export default function VideoHero() {
 }
 ```
 
-- [ ] Update `app/page.tsx` to add the VideoHero:
+- [x] Update `app/page.tsx` to add the VideoHero:
 
 ```tsx
 import Navbar from "@/components/Navbar";
@@ -541,13 +541,13 @@ export default function Home() {
 ```
 
 ##### Step 3 Verification Checklist
-- [ ] Hero occupies full viewport on load with drone video visible
-- [ ] Scrolling down scrubs through the video smoothly (frames advance with scroll position)
-- [ ] "HappyNest" / "Blanc Belle" title is visible initially, fades out on scroll
-- [ ] "Nestled in the serene embrace of Sohna" tagline fades in mid-scroll, then fades out
-- [ ] Video section unpins cleanly after 3x viewport scroll distance
-- [ ] On mobile: video scales with `object-cover`, text remains readable
-- [ ] No console errors, no GSAP warnings
+- [x] Hero occupies full viewport on load with drone video visible
+- [x] Scrolling down scrubs through the video smoothly (frames advance with scroll position)
+- [x] "HappyNest" / "Blanc Belle" title is visible initially, fades out on scroll
+- [x] "Nestled in the serene embrace of Sohna" tagline fades in mid-scroll, then fades out
+- [x] Video section unpins cleanly after 3x viewport scroll distance
+- [x] On mobile: video scales with `object-cover`, text remains readable
+- [x] No console errors, no GSAP warnings
 
 #### Step 3 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
