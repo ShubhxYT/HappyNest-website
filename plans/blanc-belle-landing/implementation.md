@@ -556,7 +556,7 @@ export default function Home() {
 
 #### Step 4: About Section + Stats Bar
 
-- [ ] Create `components/About.tsx`:
+- [x] Create `components/About.tsx`:
 
 ```tsx
 "use client";
@@ -651,7 +651,7 @@ export default function About() {
 }
 ```
 
-- [ ] Create `components/StatsBar.tsx`:
+- [x] Create `components/StatsBar.tsx`:
 
 ```tsx
 "use client";
@@ -723,7 +723,7 @@ export default function StatsBar() {
 }
 ```
 
-- [ ] Update `app/page.tsx`:
+- [x] Update `app/page.tsx`:
 
 ```tsx
 import Navbar from "@/components/Navbar";
@@ -750,14 +750,14 @@ export default function Home() {
 ```
 
 ##### Step 4 Verification Checklist
-- [ ] About section: text left (60%), aerial image right (40%) on desktop
-- [ ] About section: collapses to single column on mobile (image on top)
-- [ ] Tags ("Private Pool & Jacuzzi", etc.) appear with slight delay
-- [ ] Text and image fade in as they enter viewport
-- [ ] Stats bar: numbers animate/count up when scrolled into view
-- [ ] Stats bar has warm stone-100 background band
-- [ ] "2:00 PM" stat animates correctly
-- [ ] All text uses Satoshi body / Outfit for headings
+- [x] About section: text left (60%), aerial image right (40%) on desktop
+- [x] About section: collapses to single column on mobile (image on top)
+- [x] Tags ("Private Pool & Jacuzzi", etc.) appear with slight delay
+- [x] Text and image fade in as they enter viewport
+- [x] Stats bar: numbers animate/count up when scrolled into view
+- [x] Stats bar has warm stone-100 background band
+- [x] "2:00 PM" stat animates correctly
+- [x] All text uses Satoshi body / Outfit for headings
 
 #### Step 4 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.

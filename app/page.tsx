@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import WhatsAppFab from "@/components/WhatsAppFab";
 import VideoHero from "@/components/VideoHero";
+import About from "@/components/About";
+import StatsBar from "@/components/StatsBar";
 
 export default function Home() {
   return (
@@ -8,12 +10,10 @@ export default function Home() {
       <Navbar />
       <main>
         <VideoHero />
-        {/* Spacer sections for scrolling test */}
-        <section className="min-h-[100dvh] flex items-center justify-center bg-cream">
-          <p className="font-satoshi text-stone-500 text-lg">
-            Content sections coming soon
-          </p>
-        </section>
+        <About />
+        <StatsBar />
+        {/* Spacer for scroll test */}
+        <section className="min-h-[50vh] bg-cream" />
       </main>
       <WhatsAppFab />
     </>
