@@ -6,6 +6,8 @@ import StatsBar from "@/components/StatsBar";
 import Spaces from "@/components/Spaces";
 import LivingAreas from "@/components/LivingAreas";
 import PoolGarden from "@/components/PoolGarden";
+import Amenities from "@/components/Amenities";
+import Experiences from "@/components/Experiences";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
         <Spaces />
         <LivingAreas />
         <PoolGarden />
+        <Amenities />
+        <Experiences />
         {/* Spacer for scroll test */}
         <section className="min-h-[50vh] bg-cream" />
       </main>

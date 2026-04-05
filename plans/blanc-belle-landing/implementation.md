@@ -1737,15 +1737,15 @@ export default function Home() {
 ```
 
 ##### Step 8 Verification Checklist
-- [ ] Amenities: asymmetric 2-column layout (2fr / 1fr) on desktop — Outdoor + Indoor left, Convenience right
-- [ ] Amenities: no card boxes — items separated by `border-t` dividers
-- [ ] Amenities: Phosphor icons render correctly for each item
-- [ ] Amenities: "Add-on" labels appear right-aligned for bonfire, BBQ, projector
-- [ ] Amenities: staggered reveal animation on scroll
-- [ ] Experiences: items slide in from alternating sides (left, right, left...)
-- [ ] Experiences: warm stone-100 background band with borders
-- [ ] Experiences: each item has icon in cream circle, title, and description
-- [ ] Mobile: both sections collapse cleanly to single column
+- [x] Amenities: asymmetric 2-column layout (2fr / 1fr) on desktop — Outdoor + Indoor left, Convenience right
+- [x] Amenities: no card boxes — items separated by `border-t` dividers
+- [x] Amenities: Phosphor icons render correctly for each item
+- [x] Amenities: "Add-on" labels appear right-aligned for bonfire, BBQ, projector
+- [x] Amenities: staggered reveal animation on scroll
+- [x] Experiences: items slide in from alternating sides (left, right, left...)
+- [x] Experiences: warm stone-100 background band with borders
+- [x] Experiences: each item has icon in cream circle, title, and description
+- [x] Mobile: both sections collapse cleanly to single column
 
 #### Step 8 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
