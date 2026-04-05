@@ -1365,14 +1365,14 @@ export default function Home() {
 ```
 
 ##### Step 7 Verification Checklist
-- [ ] Section has dark (stone-950) background — visual contrast from cream sections
-- [ ] "Immerse & Unwind" title pinned in top-left corner
-- [ ] Scrolling down causes the gallery to pan horizontally
-- [ ] 8 images with varying aspect ratios (not a uniform grid)
-- [ ] Gallery moves smoothly — no jank or jumping
-- [ ] Section unpins cleanly when gallery reaches the end
-- [ ] Mobile: images are large enough to see detail (75vw wide)
-- [ ] No GSAP console warnings
+- [x] Section has dark (stone-950) background — visual contrast from cream sections
+- [x] "Immerse & Unwind" title pinned in top-left corner
+- [x] Scrolling down causes the gallery to pan horizontally
+- [x] 8 images with varying aspect ratios (not a uniform grid)
+- [x] Gallery moves smoothly — no jank or jumping
+- [x] Section unpins cleanly when gallery reaches the end
+- [x] Mobile: images are large enough to see detail (75vw wide)
+- [x] No GSAP console warnings
 
 #### Step 7 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
