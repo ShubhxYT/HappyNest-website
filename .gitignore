@@ -37,3 +37,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Source video (frames extracted to public/images/hero-frames/)
+# public/video/drone-entrance.mp4

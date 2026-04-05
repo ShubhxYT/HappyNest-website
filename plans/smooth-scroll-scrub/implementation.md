@@ -1,3 +1,73 @@
+# Smooth Scroll-Scrub Video → Image Sequence + Canvas
+
+## Goal
+Replace the laggy `video.currentTime` scroll-scrubbing in VideoHero with an Apple-style image-sequence + canvas approach, eliminating the H.264 keyframe-seeking bottleneck for buttery-smooth frame-by-frame scroll animation.
+
+## Prerequisites
+Make sure you are currently on the `blanc-belle-landing` branch before beginning implementation.
+If not, move to the correct branch. If the branch does not exist, create it from main.
+
+---
+
+### Step-by-Step Instructions
+
+---
+
+#### Step 1: Install ffmpeg & Extract Frames
+
+- [x] Check if ffmpeg is installed:
+
+```bash
+which ffmpeg
+```
+
+- [x] If not installed, install via Homebrew:
+
+```bash
+brew install ffmpeg
+```
+
+- [x] Create the hero-frames directory:
+
+```bash
+mkdir -p public/images/hero-frames
+```
+
+- [x] Extract ~150 WebP frames from the drone video at 30fps:
+
+```bash
+ffmpeg -i public/video/drone-entrance.mp4 -vf "fps=30,scale=1920:-1" -quality 80 public/images/hero-frames/frame-%04d.webp
+```
+
+- [x] Verify frame count and total size:
+
+```bash
+ls public/images/hero-frames/ | wc -l
+du -sh public/images/hero-frames/
+```
+
+- [x] If total size exceeds 6MB, re-extract at lower fps (90 frames is still smooth at 300vh scroll distance):
+
+```bash
+rm public/images/hero-frames/*
+ffmpeg -i public/video/drone-entrance.mp4 -vf "fps=18,scale=1920:-1" -quality 75 public/images/hero-frames/frame-%04d.webp
+```
+
+##### Step 1 Verification Checklist
+- [x] `public/images/hero-frames/` contains 90–150 sequentially numbered WebP files
+- [x] Total directory size is under 6MB
+- [x] `frame-0001.webp` opens correctly and shows the first frame of the drone video
+
+#### Step 1 STOP & COMMIT
+**STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
+
+---
+
+#### Step 2: Rewrite VideoHero with Canvas + Image Sequence
+
+- [x] Replace the entire contents of `components/VideoHero.tsx` with:
+
+```tsx
 "use client";
 
 import { useRef, useEffect, useState, useCallback } from "react";
@@ -8,7 +78,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // IMPORTANT: Update this to match the actual number of extracted frames.
 // Run: ls public/images/hero-frames/ | wc -l
-const FRAME_COUNT = 91;
+const FRAME_COUNT = 150;
 
 function getFramePath(index: number): string {
   const num = String(index + 1).padStart(4, "0");
@@ -62,8 +132,8 @@ export default function VideoHero() {
   }, [drawFrame]);
 
   useEffect(() => {
-    const container = containerRef.current;
     const canvas = canvasRef.current;
+    const container = containerRef.current;
     const title = titleRef.current;
     const tagline = taglineRef.current;
     if (!canvas || !container || !title || !tagline) return;
@@ -178,7 +248,10 @@ export default function VideoHero() {
   return (
     <section ref={containerRef} className="relative h-[300vh]">
       <div className="video-pin-target min-h-[100dvh] w-full overflow-hidden">
-        <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 w-full h-full"
+        />
 
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-stone-950/30" />
@@ -212,3 +285,77 @@ export default function VideoHero() {
     </section>
   );
 }
+```
+
+> **IMPORTANT:** After extracting frames, update `FRAME_COUNT` at the top of the file to match the actual number of frames extracted. Run `ls public/images/hero-frames/ | wc -l` to get the count.
+
+##### Step 2 Verification Checklist
+- [x] `npm run dev` starts without errors
+- [x] First frame appears on page load (no blank canvas)
+- [x] Scrolling through the hero section shows smooth frame-by-frame animation
+- [x] Title fades out in the first 20% of scroll
+- [x] Tagline fades in at 15-35% and fades out at 60-80%
+- [x] No visible frame gaps or jumps during fast scrolling
+- [x] Canvas covers the full viewport without distortion
+
+#### Step 2 STOP & COMMIT
+**STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
+
+---
+
+#### Step 3: Fix CSS Conflicts
+
+- [x] In `app/globals.css`, remove the `scroll-behavior: smooth` line. Replace the `@layer base` block with:
+
+```css
+@layer base {
+  body {
+    font-family: var(--font-satoshi);
+    background-color: var(--color-cream);
+    color: var(--color-stone-950);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-white);
+  }
+}
+```
+
+> **Why:** `scroll-behavior: smooth` on `html` causes the browser to interpolate scroll position, which creates a mismatch between the browser's scroll position and GSAP ScrollTrigger's tracking. This introduces input lag and inconsistent frame timing during scroll-scrubbing.
+
+##### Step 3 Verification Checklist
+- [x] No build errors
+- [x] Scroll-scrubbing feels immediately responsive (no input lag)
+- [x] Other scroll-based animations (About, Spaces, etc.) still work correctly
+- [x] Clicking anchor links still scrolls to the right place (verify Navbar links if any)
+
+#### Step 3 STOP & COMMIT
+**STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
+
+---
+
+#### Step 4: Add `.gitignore` Entry for Source Video (Optional)
+
+- [x] The original `public/video/drone-entrance.mp4` (15MB) can be kept as a source asset or removed to reduce deploy size. If keeping it for future re-extraction but want to exclude from deploys, add to `.gitignore`:
+
+```
+# Source video (frames extracted to public/images/hero-frames/)
+# public/video/drone-entrance.mp4
+```
+
+> **Decision point:** If you want to remove the video entirely to save 15MB from the repo, run:
+> ```bash
+> rm public/video/drone-entrance.mp4
+> rmdir public/video
+> ```
+> Only do this after verifying the canvas approach works perfectly.
+
+##### Step 4 Verification Checklist
+- [x] `npm run build` completes successfully
+- [x] No references to `/video/drone-entrance.mp4` remain in the codebase (it was only in VideoHero.tsx which has been rewritten)
+
+#### Step 4 STOP & COMMIT
+**STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
