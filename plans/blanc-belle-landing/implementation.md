@@ -2005,15 +2005,15 @@ export default function Home() {
 ```
 
 ##### Step 9 Verification Checklist
-- [ ] Location: split layout — text/attractions left, Google Maps iframe right
-- [ ] Location: IGI Airport (55 km) and Railway Station (60 km) distances shown
-- [ ] Location: 6 nearby attractions listed with icons
-- [ ] Location: map loads and shows Sohna, Haryana area
-- [ ] Footer: dark stone-950 background, 3-column layout (brand, contact, house rules)
-- [ ] Footer: WhatsApp and phone links work correctly
-- [ ] Footer: house rules list matches property data
-- [ ] Mobile: location and footer collapse to single column cleanly
-- [ ] All nav anchor links (#about, #spaces, #amenities, #location) scroll to correct sections
+- [x] Location: split layout — text/attractions left, Google Maps iframe right
+- [x] Location: IGI Airport (55 km) and Railway Station (60 km) distances shown
+- [x] Location: 6 nearby attractions listed with icons
+- [x] Location: map loads and shows Sohna, Haryana area
+- [x] Footer: dark stone-950 background, 3-column layout (brand, contact, house rules)
+- [x] Footer: WhatsApp and phone links work correctly
+- [x] Footer: house rules list matches property data
+- [x] Mobile: location and footer collapse to single column cleanly
+- [x] All nav anchor links (#about, #spaces, #amenities, #location) scroll to correct sections
 
 #### Step 9 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.

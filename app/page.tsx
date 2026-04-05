@@ -8,6 +8,8 @@ import LivingAreas from "@/components/LivingAreas";
 import PoolGarden from "@/components/PoolGarden";
 import Amenities from "@/components/Amenities";
 import Experiences from "@/components/Experiences";
+import Location from "@/components/Location";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -22,9 +24,9 @@ export default function Home() {
         <PoolGarden />
         <Amenities />
         <Experiences />
-        {/* Spacer for scroll test */}
-        <section className="min-h-[50vh] bg-cream" />
+        <Location />
       </main>
+      <Footer />
       <WhatsAppFab />
     </>
   );
