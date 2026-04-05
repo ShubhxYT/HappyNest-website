@@ -339,7 +339,7 @@ export default function VideoHero() {
 
 #### Step 4: Add `.gitignore` Entry for Source Video (Optional)
 
-- [ ] The original `public/video/drone-entrance.mp4` (15MB) can be kept as a source asset or removed to reduce deploy size. If keeping it for future re-extraction but want to exclude from deploys, add to `.gitignore`:
+- [x] The original `public/video/drone-entrance.mp4` (15MB) can be kept as a source asset or removed to reduce deploy size. If keeping it for future re-extraction but want to exclude from deploys, add to `.gitignore`:
 
 ```
 # Source video (frames extracted to public/images/hero-frames/)
@@ -354,8 +354,8 @@ export default function VideoHero() {
 > Only do this after verifying the canvas approach works perfectly.
 
 ##### Step 4 Verification Checklist
-- [ ] `npm run build` completes successfully
-- [ ] No references to `/video/drone-entrance.mp4` remain in the codebase (it was only in VideoHero.tsx which has been rewritten)
+- [x] `npm run build` completes successfully
+- [x] No references to `/video/drone-entrance.mp4` remain in the codebase (it was only in VideoHero.tsx which has been rewritten)
 
 #### Step 4 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
