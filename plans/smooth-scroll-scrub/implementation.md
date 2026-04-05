@@ -305,7 +305,7 @@ export default function VideoHero() {
 
 #### Step 3: Fix CSS Conflicts
 
-- [ ] In `app/globals.css`, remove the `scroll-behavior: smooth` line. Replace the `@layer base` block with:
+- [x] In `app/globals.css`, remove the `scroll-behavior: smooth` line. Replace the `@layer base` block with:
 
 ```css
 @layer base {
@@ -327,10 +327,10 @@ export default function VideoHero() {
 > **Why:** `scroll-behavior: smooth` on `html` causes the browser to interpolate scroll position, which creates a mismatch between the browser's scroll position and GSAP ScrollTrigger's tracking. This introduces input lag and inconsistent frame timing during scroll-scrubbing.
 
 ##### Step 3 Verification Checklist
-- [ ] No build errors
-- [ ] Scroll-scrubbing feels immediately responsive (no input lag)
-- [ ] Other scroll-based animations (About, Spaces, etc.) still work correctly
-- [ ] Clicking anchor links still scrolls to the right place (verify Navbar links if any)
+- [x] No build errors
+- [x] Scroll-scrubbing feels immediately responsive (no input lag)
+- [x] Other scroll-based animations (About, Spaces, etc.) still work correctly
+- [x] Clicking anchor links still scrolls to the right place (verify Navbar links if any)
 
 #### Step 3 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.

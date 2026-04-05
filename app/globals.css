@@ -17,10 +17,6 @@
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     font-family: var(--font-satoshi);
     background-color: var(--color-cream);
