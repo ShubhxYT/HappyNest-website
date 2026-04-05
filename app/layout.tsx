@@ -31,6 +31,40 @@ export const metadata: Metadata = {
       },
     ],
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "VacationRental",
+  name: "HappyNest — Blanc Belle",
+  description:
+    "A luxury farm stay in Sohna, Haryana with 6 bedrooms, private pool, jacuzzi, and sprawling lawns.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Sohna",
+    addressRegion: "Haryana",
+    addressCountry: "IN",
+  },
+  numberOfBedrooms: 6,
+  numberOfBathroomsTotal: 7,
+  occupancy: {
+    "@type": "QuantitativeValue",
+    maxValue: 18,
+  },
+  amenityFeature: [
+    { "@type": "LocationFeatureSpecification", name: "Private Swimming Pool" },
+    { "@type": "LocationFeatureSpecification", name: "Outdoor Jacuzzi" },
+    { "@type": "LocationFeatureSpecification", name: "Wi-Fi" },
+    { "@type": "LocationFeatureSpecification", name: "Air Conditioning" },
+    { "@type": "LocationFeatureSpecification", name: "Pet Friendly" },
+  ],
+  checkinTime: "14:00",
+  checkoutTime: "14:00",
+  petsAllowed: true,
 };
 
 export default function RootLayout({
@@ -44,6 +78,10 @@ export default function RootLayout({
         <link
           href="https://api.fontshare.com/v2/css?f[]=satoshi@400;500;700;900&f[]=outfit@400;500;600;700&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body className="antialiased">{children}</body>

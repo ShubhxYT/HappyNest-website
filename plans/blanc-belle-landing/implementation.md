@@ -2022,7 +2022,7 @@ export default function Home() {
 
 #### Step 10: SEO, Performance Polish & Final Cleanup
 
-- [ ] Create `public/robots.txt`:
+- [x] Create `public/robots.txt`:
 
 ```
 User-agent: *
@@ -2031,7 +2031,7 @@ Allow: /
 Sitemap: https://happynest-blancbelle.com/sitemap.xml
 ```
 
-- [ ] Create `app/sitemap.ts`:
+- [x] Create `app/sitemap.ts`:
 
 ```ts
 import type { MetadataRoute } from "next";
@@ -2048,7 +2048,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 }
 ```
 
-- [ ] Update `app/layout.tsx` to add structured data for vacation rental:
+- [x] Update `app/layout.tsx` to add structured data for vacation rental:
 
 ```tsx
 import type { Metadata } from "next";
@@ -2143,7 +2143,7 @@ export default function RootLayout({
 }
 ```
 
-- [ ] Add a `.gitignore` file at the project root:
+- [x] Add a `.gitignore` file at the project root:
 
 ```
 # dependencies
@@ -2187,26 +2187,26 @@ yarn-error.log*
 next-env.d.ts
 ```
 
-- [ ] Run final build check:
+- [x] Run final build check:
 
 ```bash
 npm run build
 ```
 
 ##### Step 10 Verification Checklist
-- [ ] `npm run build` completes with zero errors
-- [ ] `npm run dev` — full page loads with all 9 sections rendering correctly
-- [ ] Video hero: scroll scrubbing works smoothly
-- [ ] Accordion slider: bedroom strips expand/collapse on desktop hover, mobile tap
-- [ ] Horizontal gallery: pool/garden section scrolls horizontally
-- [ ] All images use Next.js `<Image>` component with proper `alt` and `sizes`
-- [ ] Nav anchor links scroll to correct sections
-- [ ] WhatsApp FAB appears after scrolling past hero
-- [ ] Mobile (375px width): no horizontal overflow, all sections collapse cleanly
-- [ ] View page source: structured data JSON-LD is present in `<head>`
-- [ ] `public/robots.txt` is accessible at `/robots.txt`
-- [ ] No console errors, no hydration warnings
-- [ ] GSAP and Framer Motion are never mixed in the same component
+- [x] `npm run build` completes with zero errors
+- [x] `npm run dev` — full page loads with all 9 sections rendering correctly
+- [x] Video hero: scroll scrubbing works smoothly
+- [x] Accordion slider: bedroom strips expand/collapse on desktop hover, mobile tap
+- [x] Horizontal gallery: pool/garden section scrolls horizontally
+- [x] All images use Next.js `<Image>` component with proper `alt` and `sizes`
+- [x] Nav anchor links scroll to correct sections
+- [x] WhatsApp FAB appears after scrolling past hero
+- [x] Mobile (375px width): no horizontal overflow, all sections collapse cleanly
+- [x] View page source: structured data JSON-LD is present in `<head>`
+- [x] `public/robots.txt` is accessible at `/robots.txt`
+- [x] No console errors, no hydration warnings
+- [x] GSAP and Framer Motion are never mixed in the same component
 
 #### Step 10 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
