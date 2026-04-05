@@ -167,7 +167,7 @@ export default function Home() {
 
 #### Step 2: Navbar + WhatsApp FAB
 
-- [ ] Create `components/Navbar.tsx`:
+- [x] Create `components/Navbar.tsx`:
 
 ```tsx
 "use client";
@@ -282,7 +282,7 @@ export default function Navbar() {
 }
 ```
 
-- [ ] Create `components/WhatsAppFab.tsx`:
+- [x] Create `components/WhatsAppFab.tsx`:
 
 ```tsx
 "use client";
@@ -325,7 +325,7 @@ export default function WhatsAppFab() {
 }
 ```
 
-- [ ] Update `app/page.tsx` to include Navbar and FAB:
+- [x] Update `app/page.tsx` to include Navbar and FAB:
 
 ```tsx
 import Navbar from "@/components/Navbar";
@@ -351,13 +351,13 @@ export default function Home() {
 ```
 
 ##### Step 2 Verification Checklist
-- [ ] Navbar is transparent at top, becomes glass-blur on scroll
-- [ ] Desktop: anchor links visible, "Book Now" button with WhatsApp icon
-- [ ] Mobile (< 768px): hamburger menu toggles mobile nav
-- [ ] WhatsApp FAB appears after scrolling past the hero section
-- [ ] FAB has spring animation on appear
-- [ ] Both WhatsApp links open correct URL in new tab
-- [ ] No hydration warnings in console
+- [x] Navbar is transparent at top, becomes glass-blur on scroll
+- [x] Desktop: anchor links visible, "Book Now" button with WhatsApp icon
+- [x] Mobile (< 768px): hamburger menu toggles mobile nav
+- [x] WhatsApp FAB appears after scrolling past the hero section
+- [x] FAB has spring animation on appear
+- [x] Both WhatsApp links open correct URL in new tab
+- [x] No hydration warnings in console
 
 #### Step 2 STOP & COMMIT
 **STOP & COMMIT:** Agent must stop here and wait for the user to test, stage, and commit the change.
