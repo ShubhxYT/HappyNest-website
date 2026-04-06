@@ -20,6 +20,10 @@ import {
   Warehouse,
   Coffee,
   Lockers,
+  Thermometer,
+  Cube,
+  Drop,
+  Towel,
 } from "@phosphor-icons/react";
 import type { Icon } from "@phosphor-icons/react";
 import type { Variants } from "framer-motion";
@@ -42,8 +46,8 @@ const AMENITY_GROUPS: AmenityGroup[] = [
       { icon: SwimmingPool, label: "Private Swimming Pool" },
       { icon: Bathtub, label: "Outdoor Jacuzzi" },
       { icon: Warehouse, label: "Lawn & Gazebo" },
-      { icon: Fire, label: "Bonfire", note: "Add-on" },
-      { icon: CookingPot, label: "BBQ / Barbeque", note: "Add-on" },
+      { icon: Fire, label: "Bonfire", note: "₹2,000 / 3 hrs" },
+      { icon: CookingPot, label: "BBQ / Barbeque", note: "₹1,000" },
     ],
   },
   {
@@ -53,7 +57,9 @@ const AMENITY_GROUPS: AmenityGroup[] = [
       { icon: WifiHigh, label: "Wi-Fi throughout" },
       { icon: Television, label: "TV in all rooms" },
       { icon: Flame, label: "Fireplace" },
-      { icon: MonitorPlay, label: "Projector", note: "Add-on" },
+      { icon: Thermometer, label: "Heater" },
+      { icon: Cube, label: "Refrigerator" },
+      { icon: MonitorPlay, label: "Projector", note: "₹1,500" },
       { icon: SpeakerHigh, label: "Music System" },
       { icon: GameController, label: "Indoor & Outdoor Games" },
     ],
@@ -63,8 +69,10 @@ const AMENITY_GROUPS: AmenityGroup[] = [
     items: [
       { icon: Lockers, label: "Wardrobe in all rooms" },
       { icon: Coffee, label: "Electric Kettle" },
-      { icon: TShirt, label: "Washing Machine & Iron" },
-      { icon: Flashlight, label: "Torch" },
+      { icon: Drop, label: "Geyser in all bathrooms" },
+      { icon: Towel, label: "Towels & Basic Toiletries" },
+      { icon: TShirt, label: "Washing Machine, Iron & Clothes Dryer", note: "Complimentary" },
+      { icon: Flashlight, label: "Torch", note: "Complimentary" },
       { icon: SecurityCamera, label: "CCTV Security" },
       { icon: Wheelchair, label: "Wheelchair Friendly" },
     ],
@@ -192,6 +200,16 @@ export default function Amenities() {
             ))}
           </div>
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-xs text-stone-400 mt-10"
+        >
+          All add-on costs subject to 18% GST.
+        </motion.p>
       </div>
     </section>
   );

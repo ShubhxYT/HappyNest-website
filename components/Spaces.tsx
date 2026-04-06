@@ -54,6 +54,14 @@ const ROOMS: Room[] = [
     image1: "/images/bedrooms/lime1.jpg",
     image2: "/images/bedrooms/lime2.jpg",
   },
+  {
+    name: "The Pearl Room",
+    color: "pearl",
+    floor: "First Floor",
+    features: ["King-size bed", "Balcony", "Ensuite bathroom"],
+    image1: "/images/bedrooms/grey3.jpg",
+    image2: "/images/bedrooms/grey4.jpg",
+  },
 ];
 
 export default function Spaces() {
