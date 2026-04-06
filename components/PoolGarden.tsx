@@ -81,9 +81,13 @@ export default function PoolGarden() {
         <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold-light mb-3">
           Pool & Garden
         </p>
-        <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-cream">
+        <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-cream mb-3">
           Immerse & Unwind
         </h2>
+        <p className="text-sm text-cream/60 max-w-[45ch] leading-relaxed">
+          Private pool — 50 × 10 metres, 4 ft deep. Lawn spanning approx.
+          400 sq. ft. with gazebo &amp; al fresco seating.
+        </p>
       </div>
 
       {/* Horizontal track */}
