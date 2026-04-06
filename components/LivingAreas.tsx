@@ -36,6 +36,14 @@ const AREAS: AreaBlock[] = [
     imageAlt: "First floor lounge with table tennis and seating",
     imageFirst: true,
   },
+  {
+    title: "Terrace",
+    description:
+      "A beautiful and expansive private terrace with alfresco seating. Perfect for midnight stargazing and tranquil dewy mornings, offering breathtaking views of the surrounding landscape.",
+    image: "/images/single/main-big-balcony.jpeg",
+    imageAlt: "Expansive private terrace with alfresco seating and views",
+    imageFirst: false,
+  },
 ];
 
 export default function LivingAreas() {

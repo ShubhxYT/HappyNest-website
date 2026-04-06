@@ -56,9 +56,10 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-stone-400">
               <li>Check-in: 2:00 PM</li>
               <li>Check-out: 2:00 PM</li>
+              <li>Early check-in / late check-out subject to availability</li>
               <li>Pets welcome</li>
               <li>No access to villa kitchen</li>
-              <li>Visitor charges apply</li>
+              <li>Visitor charges: ₹1,000 + taxes per person per day (up to 4 hrs)</li>
             </ul>
           </div>
         </div>
