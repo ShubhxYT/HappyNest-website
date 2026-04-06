@@ -7,6 +7,7 @@ import Spaces from "@/components/Spaces";
 import LivingAreas from "@/components/LivingAreas";
 import PoolGarden from "@/components/PoolGarden";
 import Amenities from "@/components/Amenities";
+import Meals from "@/components/Meals";
 import Experiences from "@/components/Experiences";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <LivingAreas />
         <PoolGarden />
         <Amenities />
+        <Meals />
         <Experiences />
         <Location />
       </main>
