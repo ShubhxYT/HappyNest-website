@@ -8,8 +8,6 @@ My dad owns a beautiful luxury farm stay property in Sohna, Haryana — **HappyN
 
 I decided to build a website for it. Not because I'm a frontend developer (I'm not, lol), but because I wanted to showcase what makes this place special. So I coded it full-stack — Next.js on the frontend, and everything wired up to make it work smoothly.
 
-**Learn more about the property:** Check out [happynest_blanc_belle.md](./happynest_blanc_belle.md) for all the details about rooms, amenities, and what makes it special.
-
 ---
 
 ## Deployment
