@@ -39,7 +39,7 @@ const RULES: Rule[] = [
     icon: Users,
     title: "Visitor Charges",
     detail:
-      "Non-staying guests: ₹1,000 + taxes per person per day (up to 4 hours)",
+      "Non-staying guests: ₹1,000 + taxes per person per day (up to 4 hours) – meals excluded",
   },
   {
     icon: CookingPot,
