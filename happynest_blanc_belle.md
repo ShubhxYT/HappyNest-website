@@ -30,7 +30,7 @@ A haven for weekend getaways, the property delights every visitor with its invit
 | Bedrooms | 6 |
 | Bathrooms | 7 (6 ensuite + 1 common) |
 | Check-in | 2:00 PM |
-| Check-out | 2:00 PM |
+| Check-out | 12:00 PM |
 | Meals | Available (at additional cost) |
 | Pets | Welcome |
 
@@ -199,7 +199,7 @@ HappyNest is nestled amidst the verdant embrace of the Aravalli Hills in Sohna â
 
 ## House Rules & Policies
 
-- Check-in: **2:00 PM** | Check-out: **2:00 PM**
+- Check-in: **2:00 PM** | Check-out: **12:00 PM**
 - Early check-in and late check-out subject to availability (additional fee may apply)
 - Pets are welcome at the property
 - Visitors (non-staying guests) are subject to a mandatory charge of â‚¹1,000 + taxes per person per day (up to 4 hours)

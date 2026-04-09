@@ -22,7 +22,7 @@ const RULES: Rule[] = [
   {
     icon: Clock,
     title: "Check-in & Check-out",
-    detail: "Check-in: 2:00 PM | Check-out: 2:00 PM",
+    detail: "Check-in: 2:00 PM | Check-out: 12:00 PM",
   },
   {
     icon: ArrowsClockwise,

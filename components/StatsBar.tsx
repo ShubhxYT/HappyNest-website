@@ -59,7 +59,7 @@ export default function StatsBar() {
           <StatItem value={18} label="Guests" prefix="Up to " />
           <StatItem value={6} label="Bedrooms" />
           <StatItem value={7} label="Bathrooms" />
-          <StatItem value={2} suffix=":00 PM" label="Check-in & Check-out" />
+          <StatItem value={12} suffix=":00 PM" label="Check-out" />
         </div>
       </div>
     </motion.section>
