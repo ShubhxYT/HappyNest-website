@@ -63,7 +63,7 @@ const structuredData = {
     { "@type": "LocationFeatureSpecification", name: "Pet Friendly" },
   ],
   checkinTime: "14:00",
-  checkoutTime: "14:00",
+  checkoutTime: "12:00",
   petsAllowed: true,
 };
 

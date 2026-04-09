@@ -55,7 +55,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-stone-400">
               <li>Check-in: 2:00 PM</li>
-              <li>Check-out: 2:00 PM</li>
+              <li>Check-out: 12:00 PM</li>
               <li>Early check-in / late check-out subject to availability</li>
               <li>Pets welcome</li>
               <li>No access to villa kitchen</li>
