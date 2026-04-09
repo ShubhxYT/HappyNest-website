@@ -3,7 +3,7 @@
 import { WhatsappLogo, Phone, MapPin } from "@phosphor-icons/react";
 
 const WHATSAPP_URL =
-  "https://wa.me/919999999999?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
+  "https://wa.me/919971800880?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
 
 export default function Footer() {
   return (
@@ -35,11 +35,11 @@ export default function Footer() {
                 WhatsApp - Book Now
               </a>
               <a
-                href="tel:+919999999999"
+                href="tel:+919971800880"
                 className="flex items-center gap-3 text-sm text-stone-300 hover:text-cream transition-colors"
               >
                 <Phone size={18} />
-                +91 99999 99999
+                +91 99718 00880
               </a>
               <p className="flex items-start gap-3 text-sm text-stone-300">
                 <MapPin size={18} className="flex-shrink-0 mt-0.5" />

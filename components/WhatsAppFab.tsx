@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { WhatsappLogo } from "@phosphor-icons/react";
 
 const WHATSAPP_URL =
-  "https://wa.me/919999999999?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
+  "https://wa.me/919971800880?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
 
 export default function WhatsAppFab() {
   const [visible, setVisible] = useState(false);
