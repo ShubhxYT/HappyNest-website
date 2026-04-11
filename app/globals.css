@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-cream: #FAF7F2;
   --color-stone-950: #1C1917;
@@ -11,6 +13,16 @@
   --color-gold: #B8860B;
   --color-gold-light: #D4A843;
   --color-white: #FFFFFF;
+
+  /* Nocturnal Sanctuary dark palette */
+  --color-surface: #131313;
+  --color-surface-low: #1C1B1B;
+  --color-surface-container: #201F1F;
+  --color-surface-bright: #393939;
+  --color-on-surface: #E5E2E1;
+  --color-on-surface-dim: #A19E9A;
+  --color-outline-faint: #4D4635;
+  --color-primary-bright: #F2CA50;
 
   --font-satoshi: "Satoshi", sans-serif;
   --font-outfit: "Outfit", sans-serif;

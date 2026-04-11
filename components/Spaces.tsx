@@ -68,7 +68,7 @@ export default function Spaces() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="spaces" className="bg-cream py-24 md:py-36">
+    <section id="spaces" className="bg-cream dark:bg-surface py-24 md:py-36">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export default function Spaces() {
           <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
             Spaces
           </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950">
+          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
             Six lavish bedrooms,
             <br />
             each with its own character

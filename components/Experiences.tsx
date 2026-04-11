@@ -58,7 +58,7 @@ const EXPERIENCES: Experience[] = [
 
 export default function Experiences() {
   return (
-    <section className="bg-stone-100 py-24 md:py-36 border-y border-stone-200">
+    <section className="bg-stone-100 dark:bg-surface-low py-24 md:py-36 border-y border-stone-200 dark:border-transparent">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ export default function Experiences() {
           <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
             Experiences
           </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950">
+          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
             Curated for every mood
           </h2>
         </motion.div>
@@ -79,7 +79,7 @@ export default function Experiences() {
           {EXPERIENCES.map((exp, i) => (
             <motion.div
               key={exp.title}
-              className="flex items-start gap-6 py-8 border-t border-stone-300 last:border-b"
+              className="flex items-start gap-6 py-8 border-t border-stone-300 dark:border-outline-faint/30 last:border-b last:dark:border-outline-faint/30"
               initial={{
                 opacity: 0,
                 x: i % 2 === 0 ? -30 : 30,
@@ -92,14 +92,14 @@ export default function Experiences() {
                 delay: i * 0.05,
               }}
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cream flex items-center justify-center mt-1">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cream dark:bg-surface-container flex items-center justify-center mt-1">
                 <exp.icon size={20} weight="regular" className="text-gold" />
               </div>
               <div>
-                <h3 className="font-outfit text-lg md:text-xl text-stone-950 tracking-tight mb-1">
+                <h3 className="font-outfit text-lg md:text-xl text-stone-950 dark:text-on-surface tracking-tight mb-1">
                   {exp.title}
                 </h3>
-                <p className="text-base text-stone-500 leading-relaxed max-w-[55ch]">
+                <p className="text-base text-stone-500 dark:text-on-surface-dim leading-relaxed max-w-[55ch]">
                   {exp.description}
                 </p>
               </div>

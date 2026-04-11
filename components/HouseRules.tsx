@@ -73,7 +73,7 @@ const itemVariants: Variants = {
 
 export default function HouseRules() {
   return (
-    <section className="bg-cream py-24 md:py-36">
+    <section className="bg-cream dark:bg-surface py-24 md:py-36">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         {/* Section header */}
         <motion.div
@@ -86,7 +86,7 @@ export default function HouseRules() {
           <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
             House Rules & Policies
           </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950">
+          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
             Before You Arrive
           </h2>
         </motion.div>
@@ -103,16 +103,16 @@ export default function HouseRules() {
             <motion.div
               key={rule.title}
               variants={itemVariants}
-              className="flex items-start gap-4 p-6 rounded-xl border border-stone-200 bg-stone-100/50"
+              className="flex items-start gap-4 p-6 rounded-xl border border-stone-200 dark:border-transparent bg-stone-100/50 dark:bg-surface-container"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cream flex items-center justify-center">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cream dark:bg-surface-bright flex items-center justify-center">
                 <rule.icon size={20} weight="regular" className="text-gold" />
               </div>
               <div>
-                <h3 className="font-outfit text-base tracking-tight text-stone-950 mb-1">
+                <h3 className="font-outfit text-base tracking-tight text-stone-950 dark:text-on-surface mb-1">
                   {rule.title}
                 </h3>
-                <p className="text-sm text-stone-500 leading-relaxed">
+                <p className="text-sm text-stone-500 dark:text-on-surface-dim leading-relaxed">
                   {rule.detail}
                 </p>
               </div>

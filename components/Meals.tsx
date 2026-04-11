@@ -54,7 +54,7 @@ const MEAL_NOTES = [
 
 export default function Meals() {
   return (
-    <section className="bg-stone-100 py-24 md:py-36 border-y border-stone-200">
+    <section className="bg-stone-100 dark:bg-surface-low py-24 md:py-36 border-y border-stone-200 dark:border-transparent">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         {/* Section header */}
         <motion.div
@@ -67,7 +67,7 @@ export default function Meals() {
           <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
             Dining & Add-Ons
           </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950">
+          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
             Savour Every Moment
           </h2>
         </motion.div>
@@ -80,35 +80,35 @@ export default function Meals() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="font-outfit text-lg text-stone-950 tracking-tight mb-6">
+            <h3 className="font-outfit text-lg text-stone-950 dark:text-on-surface tracking-tight mb-6">
               Meal Packages
             </h3>
 
             <div className="space-y-4 mb-8">
               {/* Half Board */}
-              <div className="rounded-xl border border-stone-200 bg-cream p-6">
-                <h4 className="font-outfit text-xl tracking-tight text-stone-950 mb-2">
+              <div className="rounded-xl border border-stone-200 dark:border-transparent bg-cream dark:bg-surface-container p-6">
+                <h4 className="font-outfit text-xl tracking-tight text-stone-950 dark:text-on-surface mb-2">
                   Half Board
                 </h4>
-                <p className="text-sm text-stone-500 leading-relaxed">
+                <p className="text-sm text-stone-500 dark:text-on-surface-dim leading-relaxed">
                   Breakfast + one major meal (lunch or dinner). Perfect for
                   guests who prefer to keep their dining flexible.
                 </p>
-                <p className="text-sm text-gold font-medium mt-3">
+                <p className="text-sm text-gold dark:text-primary-bright font-medium mt-3">
                   Contact us for pricing
                 </p>
               </div>
 
               {/* Full Board */}
-              <div className="rounded-xl border border-stone-200 bg-cream p-6">
-                <h4 className="font-outfit text-xl tracking-tight text-stone-950 mb-2">
+              <div className="rounded-xl border border-stone-200 dark:border-transparent bg-cream dark:bg-surface-container p-6">
+                <h4 className="font-outfit text-xl tracking-tight text-stone-950 dark:text-on-surface mb-2">
                   Full Board
                 </h4>
-                <p className="text-sm text-stone-500 leading-relaxed">
+                <p className="text-sm text-stone-500 dark:text-on-surface-dim leading-relaxed">
                   All meals included — breakfast, lunch, and dinner. Ideal for a
                   completely carefree stay.
                 </p>
-                <p className="text-sm text-gold font-medium mt-3">
+                <p className="text-sm text-gold dark:text-primary-bright font-medium mt-3">
                   Contact us for pricing
                 </p>
               </div>
@@ -119,7 +119,7 @@ export default function Meals() {
               {MEAL_NOTES.map((note) => (
                 <li
                   key={note}
-                  className="flex items-start gap-2 text-sm text-stone-400"
+                  className="flex items-start gap-2 text-sm text-stone-400 dark:text-on-surface-dim/70"
                 >
                   <span className="text-gold mt-1 text-xs">●</span>
                   {note}
@@ -135,7 +135,7 @@ export default function Meals() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="font-outfit text-lg text-stone-950 tracking-tight mb-6">
+            <h3 className="font-outfit text-lg text-stone-950 dark:text-on-surface tracking-tight mb-6">
               Add-On Services
             </h3>
 
@@ -150,24 +150,24 @@ export default function Meals() {
                 <motion.div
                   key={item.label}
                   variants={itemVariants}
-                  className="flex items-center gap-4 py-4 border-t border-stone-200"
+                  className="flex items-center gap-4 py-4 border-t border-stone-200 dark:border-transparent"
                 >
                   <item.icon
                     size={22}
                     weight="regular"
-                    className="text-stone-500 flex-shrink-0"
+                    className="text-stone-500 dark:text-on-surface-dim flex-shrink-0"
                   />
-                  <span className="text-base text-stone-950 font-medium">
+                  <span className="text-base text-stone-950 dark:text-on-surface font-medium">
                     {item.label}
                   </span>
-                  <span className="text-xs text-stone-400 ml-auto text-right">
+                  <span className="text-xs text-stone-400 dark:text-on-surface-dim/70 ml-auto text-right">
                     {item.cost}
                   </span>
                 </motion.div>
               ))}
             </motion.div>
 
-            <p className="text-xs text-stone-400 mt-6 leading-relaxed">
+            <p className="text-xs text-stone-400 dark:text-on-surface-dim/70 mt-6 leading-relaxed">
               All add-on food &amp; event costs subject to 18% GST. Prices may
               vary during peak season.
             </p>

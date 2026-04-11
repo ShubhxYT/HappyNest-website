@@ -48,7 +48,7 @@ const AREAS: AreaBlock[] = [
 
 export default function LivingAreas() {
   return (
-    <section className="bg-cream py-24 md:py-36">
+    <section className="bg-cream dark:bg-surface py-24 md:py-36">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ export default function LivingAreas() {
           <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
             Common Areas
           </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950">
+          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
             Gather, dine, unwind
           </h2>
         </motion.div>
@@ -107,10 +107,10 @@ export default function LivingAreas() {
                   delay: 0.1,
                 }}
               >
-                <h3 className="font-outfit text-2xl md:text-3xl tracking-tight text-stone-950 mb-4">
+                <h3 className="font-outfit text-2xl md:text-3xl tracking-tight text-stone-950 dark:text-on-surface mb-4">
                   {area.title}
                 </h3>
-                <p className="text-base text-stone-500 leading-relaxed max-w-[65ch]">
+                <p className="text-base text-stone-500 dark:text-on-surface-dim leading-relaxed max-w-[65ch]">
                   {area.description}
                 </p>
               </motion.div>

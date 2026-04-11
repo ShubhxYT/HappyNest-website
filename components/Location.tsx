@@ -24,7 +24,7 @@ export default function Location() {
   return (
     <section
       id="location"
-      className="bg-stone-100 py-24 md:py-36 border-t border-stone-200"
+      className="bg-stone-100 dark:bg-surface-low py-24 md:py-36 border-t border-stone-200 dark:border-transparent"
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <motion.div
@@ -37,7 +37,7 @@ export default function Location() {
           <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
             Location
           </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950">
+          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
             Getting here
           </h2>
         </motion.div>
@@ -50,7 +50,7 @@ export default function Location() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-base text-stone-500 leading-relaxed max-w-[55ch] mb-8">
+            <p className="text-base text-stone-500 dark:text-on-surface-dim leading-relaxed max-w-[55ch] mb-8">
               Nestled amidst the verdant embrace of the Aravalli Hills in Sohna
               - a charming town known for its rejuvenating hot springs, scenic
               landscapes, and mystical legends.
@@ -58,46 +58,46 @@ export default function Location() {
 
             {/* Distance markers */}
             <div className="flex flex-col gap-4 mb-10">
-              <div className="flex items-center gap-4 py-3 border-t border-stone-300">
+              <div className="flex items-center gap-4 py-3 border-t border-stone-300 dark:border-outline-faint/30">
                 <Airplane
                   size={20}
                   weight="regular"
-                  className="text-stone-500 flex-shrink-0"
+                  className="text-stone-500 dark:text-on-surface-dim flex-shrink-0"
                 />
-                <span className="text-base text-stone-950 font-medium">
+                <span className="text-base text-stone-950 dark:text-on-surface font-medium">
                   IGI Airport
                 </span>
-                <span className="text-sm text-stone-400 ml-auto">55 km</span>
+                <span className="text-sm text-stone-400 dark:text-on-surface-dim/70 ml-auto">55 km</span>
               </div>
-              <div className="flex items-center gap-4 py-3 border-t border-stone-300">
+              <div className="flex items-center gap-4 py-3 border-t border-stone-300 dark:border-outline-faint/30">
                 <Train
                   size={20}
                   weight="regular"
-                  className="text-stone-500 flex-shrink-0"
+                  className="text-stone-500 dark:text-on-surface-dim flex-shrink-0"
                 />
-                <span className="text-base text-stone-950 font-medium">
+                <span className="text-base text-stone-950 dark:text-on-surface font-medium">
                   New Delhi Railway Station
                 </span>
-                <span className="text-sm text-stone-400 ml-auto">60 km</span>
+                <span className="text-sm text-stone-400 dark:text-on-surface-dim/70 ml-auto">60 km</span>
               </div>
             </div>
 
             {/* Nearby attractions */}
-            <h3 className="font-outfit text-lg text-stone-950 tracking-tight mb-4">
+            <h3 className="font-outfit text-lg text-stone-950 dark:text-on-surface tracking-tight mb-4">
               Nearby Attractions
             </h3>
             <div className="space-y-0">
               {NEARBY.map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-center gap-3 py-3 border-t border-stone-200"
+                  className="flex items-center gap-3 py-3 border-t border-stone-200 dark:border-transparent"
                 >
                   <item.icon
                     size={18}
                     weight="regular"
-                    className="text-stone-400 flex-shrink-0"
+                    className="text-stone-400 dark:text-on-surface-dim/70 flex-shrink-0"
                   />
-                  <span className="text-sm text-stone-500">{item.label}</span>
+                  <span className="text-sm text-stone-500 dark:text-on-surface-dim">{item.label}</span>
                 </div>
               ))}
             </div>
@@ -110,7 +110,7 @@ export default function Location() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-stone-200">
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-stone-200 dark:bg-surface-container">
               <iframe
                 src="https://maps.google.com/maps?q=28.234944,77.165250&z=17&output=embed"
                 width="100%"
