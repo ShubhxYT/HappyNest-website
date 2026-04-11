@@ -100,7 +100,7 @@ const itemVariants: Variants = {
 
 export default function Amenities() {
   return (
-    <section id="amenities" className="bg-cream py-24 md:py-36">
+    <section id="amenities" className="bg-cream dark:bg-surface py-24 md:py-36">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -112,7 +112,7 @@ export default function Amenities() {
           <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
             Amenities
           </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950">
+          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
             Everything you need,
             <br />
             nothing you don&apos;t
@@ -124,7 +124,7 @@ export default function Amenities() {
           <div className="space-y-12">
             {AMENITY_GROUPS.slice(0, 2).map((group) => (
               <div key={group.title}>
-                <h3 className="font-outfit text-lg text-stone-950 tracking-tight mb-6">
+                <h3 className="font-outfit text-lg text-stone-950 dark:text-on-surface tracking-tight mb-6">
                   {group.title}
                 </h3>
                 <motion.div
@@ -138,18 +138,18 @@ export default function Amenities() {
                     <motion.div
                       key={item.label}
                       variants={itemVariants}
-                      className="flex items-center gap-4 py-4 border-t border-stone-200"
+                      className="flex items-center gap-4 py-4 border-t border-stone-200 dark:border-transparent"
                     >
                       <item.icon
                         size={22}
                         weight="regular"
-                        className="text-stone-500 flex-shrink-0"
+                        className="text-stone-500 dark:text-on-surface-dim flex-shrink-0"
                       />
-                      <span className="text-base text-stone-950 font-medium">
+                      <span className="text-base text-stone-950 dark:text-on-surface font-medium">
                         {item.label}
                       </span>
                       {item.note && (
-                        <span className="text-xs text-stone-400 ml-auto">
+                        <span className="text-xs text-stone-400 dark:text-on-surface-dim/70 ml-auto">
                           {item.note}
                         </span>
                       )}
@@ -164,7 +164,7 @@ export default function Amenities() {
           <div>
             {AMENITY_GROUPS.slice(2).map((group) => (
               <div key={group.title}>
-                <h3 className="font-outfit text-lg text-stone-950 tracking-tight mb-6">
+                <h3 className="font-outfit text-lg text-stone-950 dark:text-on-surface tracking-tight mb-6">
                   {group.title}
                 </h3>
                 <motion.div
@@ -178,18 +178,18 @@ export default function Amenities() {
                     <motion.div
                       key={item.label}
                       variants={itemVariants}
-                      className="flex items-center gap-4 py-4 border-t border-stone-200"
+                      className="flex items-center gap-4 py-4 border-t border-stone-200 dark:border-transparent"
                     >
                       <item.icon
                         size={22}
                         weight="regular"
-                        className="text-stone-500 flex-shrink-0"
+                        className="text-stone-500 dark:text-on-surface-dim flex-shrink-0"
                       />
-                      <span className="text-base text-stone-950 font-medium">
+                      <span className="text-base text-stone-950 dark:text-on-surface font-medium">
                         {item.label}
                       </span>
                       {item.note && (
-                        <span className="text-xs text-stone-400 ml-auto">
+                        <span className="text-xs text-stone-400 dark:text-on-surface-dim/70 ml-auto">
                           {item.note}
                         </span>
                       )}
@@ -206,7 +206,7 @@ export default function Amenities() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-xs text-stone-400 mt-10"
+          className="text-xs text-stone-400 dark:text-on-surface-dim/70 mt-10"
         >
           All add-on costs subject to 18% GST.
         </motion.p>

@@ -7,13 +7,13 @@ const WHATSAPP_URL =
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-950 text-cream py-16 md:py-20">
+    <footer className="bg-stone-950 dark:bg-surface-container text-cream py-16 md:py-20">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Brand */}
           <div>
             <h3 className="font-outfit text-2xl tracking-tight mb-3">HappyNest</h3>
-            <p className="text-sm text-stone-400 leading-relaxed max-w-[35ch]">
+            <p className="text-sm text-stone-400 dark:text-on-surface-dim leading-relaxed max-w-[35ch]">
               Blanc Belle - A Luxury Farm Stay in Sohna, Haryana. Close enough
               to the city, far enough to unwind.
             </p>
@@ -21,7 +21,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-outfit text-sm uppercase tracking-[0.2em] text-stone-400 mb-4">
+            <h4 className="font-outfit text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-on-surface-dim mb-4">
               Contact
             </h4>
             <div className="space-y-3">
@@ -29,19 +29,19 @@ export default function Footer() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sm text-stone-300 hover:text-cream transition-colors"
+                className="flex items-center gap-3 text-sm text-stone-300 dark:text-on-surface hover:text-cream dark:hover:text-on-surface transition-colors"
               >
                 <WhatsappLogo size={18} weight="fill" />
                 WhatsApp - Book Now
               </a>
               <a
                 href="tel:+919971800880"
-                className="flex items-center gap-3 text-sm text-stone-300 hover:text-cream transition-colors"
+                className="flex items-center gap-3 text-sm text-stone-300 dark:text-on-surface hover:text-cream dark:hover:text-on-surface transition-colors"
               >
                 <Phone size={18} />
                 +91 99718 00880
               </a>
-              <p className="flex items-start gap-3 text-sm text-stone-300">
+              <p className="flex items-start gap-3 text-sm text-stone-300 dark:text-on-surface">
                 <MapPin size={18} className="flex-shrink-0 mt-0.5" />
                 Sohna, Haryana (Near New Delhi)
               </p>
@@ -50,10 +50,10 @@ export default function Footer() {
 
           {/* House Rules */}
           <div>
-            <h4 className="font-outfit text-sm uppercase tracking-[0.2em] text-stone-400 mb-4">
+            <h4 className="font-outfit text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-on-surface-dim mb-4">
               House Rules
             </h4>
-            <ul className="space-y-2 text-sm text-stone-400">
+            <ul className="space-y-2 text-sm text-stone-400 dark:text-on-surface-dim">
               <li>Check-in: 2:00 PM</li>
               <li>Check-out: 12:00 PM</li>
               <li>Early check-in / late check-out subject to availability</li>
@@ -64,8 +64,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-stone-800">
-          <p className="text-xs text-stone-500 text-center">
+        <div className="mt-16 pt-8 border-t border-stone-800 dark:border-outline-faint/30">
+            <p className="text-xs text-stone-500 dark:text-on-surface-dim/70 text-center">
             HappyNest - Blanc Belle. All rights reserved.
           </p>
         </div>

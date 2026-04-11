@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="bg-cream py-24 md:py-36">
+    <section id="about" className="bg-cream dark:bg-surface py-24 md:py-36">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16 items-center">
           {/* Text — takes 3 of 5 columns */}
@@ -19,10 +19,10 @@ export default function About() {
             <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
               About HappyNest
             </p>
-            <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 mb-6">
+            <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface mb-6">
               More than a home — an opulent retreat
             </h2>
-            <div className="space-y-4 text-base text-stone-500 leading-relaxed max-w-[65ch]">
+            <div className="space-y-4 text-base text-stone-500 dark:text-on-surface-dim leading-relaxed max-w-[65ch]">
               <p>
                 Nestled in the serene embrace of Sohna, HappyNest — Blanc Belle
                 — stands as a testament to luxury and elegance. Its name draws
@@ -57,7 +57,7 @@ export default function About() {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="px-4 py-1.5 text-xs font-medium tracking-wide uppercase bg-stone-100 text-stone-500 rounded-full"
+                  className="px-4 py-1.5 text-xs font-medium tracking-wide uppercase bg-stone-100 dark:bg-surface-container text-stone-500 dark:text-on-surface-dim rounded-full"
                 >
                   {tag}
                 </span>

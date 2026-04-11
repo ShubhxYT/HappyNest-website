@@ -74,17 +74,17 @@ export default function PoolGarden() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100dvh] overflow-hidden bg-stone-950"
+      className="relative min-h-[100dvh] overflow-hidden bg-stone-950 dark:bg-surface-container"
     >
       {/* Pinned title */}
       <div className="absolute top-8 md:top-12 left-6 md:left-10 z-10">
-        <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold-light mb-3">
+        <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold-light dark:text-primary-bright mb-3">
           Pool & Garden
         </p>
-        <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-cream mb-3">
+        <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-cream dark:text-on-surface mb-3">
           Immerse & Unwind
         </h2>
-        <p className="text-sm text-cream/60 max-w-[45ch] leading-relaxed">
+        <p className="text-sm text-cream/60 dark:text-on-surface/50 max-w-[45ch] leading-relaxed">
           Private pool — 50 × 10 metres, 4 ft deep. Lawn spanning approx.
           400 sq. ft. with gazebo &amp; al fresco seating.
         </p>
