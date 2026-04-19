@@ -1,124 +1,115 @@
 "use client";
 
-import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
 import {
   Clock,
-  PawPrint,
+  Calendar,
+  Dog,
   Users,
-  CookingPot,
-  Warning,
-  ArrowsClockwise,
-} from "@phosphor-icons/react";
-import type { Icon } from "@phosphor-icons/react";
+  ChefHat,
+  FileText,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import SectionLabel from "./SectionLabel";
 
 interface Rule {
-  icon: Icon;
+  icon: LucideIcon;
   title: string;
-  detail: string;
+  desc: string;
 }
 
 const RULES: Rule[] = [
   {
     icon: Clock,
     title: "Check-in & Check-out",
-    detail: "Check-in: 2:00 PM | Check-out: 12:00 PM",
+    desc: "Check-in: 2:00 PM · Check-out: 12:00 PM",
   },
   {
-    icon: ArrowsClockwise,
+    icon: Calendar,
     title: "Early / Late Flexibility",
-    detail:
-      "Early check-in and late check-out subject to availability (additional fee may apply)",
+    desc: "Early check-in and late check-out subject to availability. Additional fee may apply.",
   },
   {
-    icon: PawPrint,
+    icon: Dog,
     title: "Pets Welcome",
-    detail: "Pets are welcome at the property",
+    desc: "Furry companions are welcomed with open arms at HappyNest.",
   },
   {
     icon: Users,
     title: "Visitor Charges",
-    detail:
-      "Non-staying guests: ₹1,000 + taxes per person per day (up to 4 hours) – meals excluded",
+    desc: "Non-staying guests: ₹1,000 + taxes per person per day (up to 4 hours). Meals excluded.",
   },
   {
-    icon: CookingPot,
+    icon: ChefHat,
     title: "Kitchen Access",
-    detail: "Guests do not have access to the villa kitchen",
+    desc: "Guests do not have access to the villa kitchen.",
   },
   {
-    icon: Warning,
-    title: "Policies",
-    detail:
-      "Please read all Home Truths, House Rules, and Policies thoroughly before your stay",
+    icon: FileText,
+    title: "House Policies",
+    desc: "Please read all Home Truths, House Rules, and Policies thoroughly before your stay.",
   },
 ];
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08 },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const },
-  },
-};
-
 export default function HouseRules() {
   return (
-    <section className="bg-cream dark:bg-surface py-24 md:py-36">
+    <section id="rules" className="py-24 lg:py-32 bg-stone-50 dark:bg-surface-low">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
-            House Rules & Policies
-          </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
-            Before You Arrive
-          </h2>
-        </motion.div>
+        <div className="flex justify-center mb-4">
+          <SectionLabel>House Rules &amp; Policies</SectionLabel>
+        </div>
+        <h2 className="font-outfit text-4xl lg:text-5xl font-light text-stone-800 dark:text-on-surface text-center mt-4 mb-16">
+          Before You{" "}
+          <span className="italic text-amber-600 dark:text-primary-bright">
+            Arrive
+          </span>
+        </h2>
 
-        {/* Rules grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {RULES.map((rule) => (
-            <motion.div
-              key={rule.title}
-              variants={itemVariants}
-              className="flex items-start gap-4 p-6 rounded-xl border border-stone-200 dark:border-transparent bg-stone-100/50 dark:bg-surface-container"
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {RULES.map(({ icon: Icon, title, desc }) => (
+            <div
+              key={title}
+              className="bg-white dark:bg-surface-container rounded-2xl p-6 lg:p-8 shadow-sm border border-stone-100 dark:border-transparent hover:shadow-md transition-shadow duration-300"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cream dark:bg-surface-bright flex items-center justify-center">
-                <rule.icon size={20} weight="regular" className="text-gold" />
+              <div className="w-12 h-12 bg-amber-50 dark:bg-amber-600/10 rounded-xl flex items-center justify-center mb-4">
+                <Icon
+                  size={20}
+                  className="text-amber-600 dark:text-amber-400"
+                />
               </div>
-              <div>
-                <h3 className="font-outfit text-base tracking-tight text-stone-950 dark:text-on-surface mb-1">
-                  {rule.title}
-                </h3>
-                <p className="text-sm text-stone-500 dark:text-on-surface-dim leading-relaxed">
-                  {rule.detail}
-                </p>
-              </div>
-            </motion.div>
+              <h3 className="font-semibold text-stone-800 dark:text-on-surface mb-2">
+                {title}
+              </h3>
+              <p className="text-stone-500 dark:text-on-surface-dim text-sm leading-relaxed font-light">
+                {desc}
+              </p>
+            </div>
           ))}
-        </motion.div>
+        </div>
+
+        {/* CTA block */}
+        <div className="mt-16 bg-amber-600 rounded-2xl p-8 lg:p-12 text-white text-center">
+          <h3 className="font-outfit text-2xl lg:text-3xl font-light mb-4">
+            Ready to experience Blanc Belle?
+          </h3>
+          <p className="text-amber-100 font-light mb-8 max-w-xl mx-auto">
+            Reach out to us to check availability and plan your perfect getaway
+            at HappyNest.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+919971800880"
+              className="px-8 py-3.5 bg-white text-amber-700 font-semibold text-sm tracking-widest uppercase rounded hover:bg-amber-50 transition-colors"
+            >
+              Call Us
+            </a>
+            <a
+              href="mailto:stay@happynestfarm.in"
+              className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold text-sm tracking-widest uppercase rounded hover:border-white hover:bg-white/10 transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
