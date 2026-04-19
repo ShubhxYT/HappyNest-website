@@ -1,53 +1,68 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { WhatsappLogo, Phone, List, X } from "@phosphor-icons/react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+
+interface NavbarProps {
+  scrolled: boolean;
+}
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
-  { label: "Spaces", href: "#spaces" },
+  { label: "Spaces", href: "#bedrooms" },
+  { label: "Pool & Garden", href: "#pool" },
   { label: "Amenities", href: "#amenities" },
+  { label: "Experiences", href: "#experiences" },
   { label: "Location", href: "#location" },
 ];
 
 const WHATSAPP_URL =
   "https://wa.me/919971800880?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+export default function Navbar({ scrolled }: NavbarProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-cream/80 dark:bg-surface-bright/80 backdrop-blur-xl border-b border-stone-200/50 dark:border-outline-faint/30 shadow-[0_1px_3px_rgba(28,25,23,0.04)] dark:shadow-none"
+          ? "bg-white/95 dark:bg-surface/70 backdrop-blur-md dark:backdrop-blur-xl shadow-sm dark:shadow-none"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between h-20">
         {/* Logo */}
-        <a
-          href="#"
-          className="font-outfit font-semibold text-lg md:text-xl tracking-tight text-stone-950 dark:text-on-surface"
-        >
-          HappyNest
+        <a href="#" className="flex flex-col leading-none">
+          <span
+            className={`font-outfit text-xl font-bold tracking-widest uppercase transition-colors duration-300 ${
+              scrolled ? "text-stone-800 dark:text-on-surface" : "text-white"
+            }`}
+          >
+            HappyNest
+          </span>
+          <span
+            className={`font-satoshi text-xs tracking-[0.3em] uppercase transition-colors duration-300 ${
+              scrolled
+                ? "text-amber-600 dark:text-primary-bright"
+                : "text-amber-300"
+            }`}
+          >
+            Blanc Belle
+          </span>
         </a>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop nav */}
+        <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-stone-500 hover:text-stone-950 dark:text-on-surface-dim dark:hover:text-on-surface transition-colors duration-300"
+              className={`text-xs tracking-[0.15em] uppercase font-medium transition-colors duration-300 hover:text-amber-500 ${
+                scrolled
+                  ? "text-stone-600 dark:text-on-surface-dim dark:hover:text-on-surface"
+                  : "text-white/90 hover:text-white"
+              }`}
             >
               {link.label}
             </a>
@@ -57,36 +72,37 @@ export default function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-950 text-cream dark:bg-primary-bright dark:text-surface text-sm font-medium rounded-full hover:bg-stone-800 dark:hover:opacity-90 active:scale-[0.98] transition-all duration-200"
+            className="ml-2 px-5 py-2.5 bg-amber-600 hover:bg-amber-700 dark:bg-primary-bright dark:text-surface dark:hover:opacity-90 text-white text-xs tracking-[0.15em] uppercase font-semibold rounded transition-colors duration-200"
           >
-            <WhatsappLogo size={18} weight="fill" />
             Book Now
           </a>
-        </div>
+        </nav>
 
-        {/* Mobile toggle */}
-        <div className="md:hidden flex items-center gap-2">
+        {/* Mobile controls */}
+        <div className="lg:hidden flex items-center gap-2">
           <ThemeToggle />
           <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 text-stone-950 dark:text-on-surface"
+            className={`transition-colors duration-300 ${
+              scrolled ? "text-stone-800 dark:text-on-surface" : "text-white"
+            }`}
+            onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X size={24} /> : <List size={24} />}
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-cream/95 dark:bg-surface-bright/95 backdrop-blur-xl border-t border-stone-200/50 dark:border-outline-faint/30 px-6 pb-6 pt-4">
-          <div className="flex flex-col gap-4">
+      {menuOpen && (
+        <div className="lg:hidden bg-white dark:bg-surface-bright border-t border-stone-100 dark:border-outline-faint/30 shadow-lg">
+          <div className="px-6 py-6 flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="text-base font-medium text-stone-500 hover:text-stone-950 dark:text-on-surface-dim dark:hover:text-on-surface transition-colors"
+                onClick={() => setMenuOpen(false)}
+                className="text-sm tracking-[0.1em] uppercase font-medium text-stone-600 dark:text-on-surface-dim hover:text-amber-600 dark:hover:text-primary-bright transition-colors"
               >
                 {link.label}
               </a>
@@ -95,21 +111,19 @@ export default function Navbar() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-stone-950 text-cream dark:bg-primary-bright dark:text-surface text-sm font-medium rounded-full"
+              className="mt-2 px-5 py-3 bg-amber-600 hover:bg-amber-700 text-white text-sm tracking-widest uppercase font-semibold rounded text-center transition-colors"
             >
-              <WhatsappLogo size={18} weight="fill" />
               Book Now
             </a>
             <a
               href="tel:+919971800880"
-              className="inline-flex items-center justify-center gap-2 text-sm text-stone-500 dark:text-on-surface-dim"
+              className="inline-flex items-center justify-center text-sm text-stone-500 dark:text-on-surface-dim"
             >
-              <Phone size={16} />
-              +91 99999 99999
+              +91 99718 00880
             </a>
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 }
