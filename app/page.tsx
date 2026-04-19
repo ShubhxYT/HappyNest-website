@@ -5,8 +5,8 @@ import Navbar from "@/components/Navbar";
 import WhatsAppFab from "@/components/WhatsAppFab";
 import VideoHero from "@/components/VideoHero";
 import About from "@/components/About";
-import Spaces from "@/components/Spaces";
-import LivingAreas from "@/components/LivingAreas";
+import Bedrooms from "@/components/Bedrooms";
+import CommonAreas from "@/components/CommonAreas";
 import PoolGarden from "@/components/PoolGarden";
 import Amenities from "@/components/Amenities";
 import Meals from "@/components/Meals";
@@ -30,8 +30,8 @@ export default function Home() {
       <main>
         <VideoHero />
         <About />
-        <Spaces />
-        <LivingAreas />
+        <Bedrooms />
+        <CommonAreas />
         <PoolGarden />
         <Amenities />
         <Meals />
