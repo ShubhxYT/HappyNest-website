@@ -1,122 +1,152 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState } from "react";
 import Image from "next/image";
+import SectionLabel from "./SectionLabel";
 
-gsap.registerPlugin(ScrollTrigger);
+interface GardenImage {
+  src: string;
+  alt: string;
+  span: string;
+}
 
-const GALLERY_IMAGES = [
+const IMAGES: GardenImage[] = [
   {
     src: "/images/garden/pool1.jpg",
-    alt: "Private swimming pool at HappyNest",
+    alt: "Private swimming pool",
+    span: "lg:col-span-2 lg:row-span-2",
   },
   {
     src: "/images/garden/pool2.jpg",
-    alt: "Pool area with loungers",
-  },
-  {
-    src: "/images/garden/pool3.jpg",
-    alt: "Evening view of the pool",
+    alt: "Pool area",
+    span: "",
   },
   {
     src: "/images/garden/garden.jpg",
-    alt: "Lush green garden and lawn",
+    alt: "Garden view",
+    span: "",
   },
   {
     src: "/images/garden/garden2.jpg",
-    alt: "Garden seating area with gazebo",
-  },
-  {
-    src: "/images/garden/garden3.jpg",
-    alt: "Expansive garden at Blanc Belle",
+    alt: "Garden seating",
+    span: "",
   },
   {
     src: "/images/garden/drone-1.jpg",
-    alt: "Aerial drone view of the property",
-  },
-  {
-    src: "/images/garden/drone-3.jpg",
-    alt: "Drone view showing pool and garden",
+    alt: "Aerial view of property",
+    span: "",
   },
 ];
 
+const TAGS = [
+  "Private Jacuzzi",
+  "Poolside Loungers",
+  "Garden Gazebo",
+  "Alfresco Seating",
+  "Outdoor Games",
+];
+
 export default function PoolGarden() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const track = trackRef.current;
-    if (!section || !track) return;
-
-    const ctx = gsap.context(() => {
-      const totalWidth = track.scrollWidth - window.innerWidth;
-
-      gsap.to(track, {
-        x: -totalWidth,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => `+=${totalWidth}`,
-          pin: true,
-          scrub: 1,
-          invalidateOnRefresh: true,
-        },
-      });
-    }, section);
-
-    return () => ctx.revert();
-  }, []);
+  const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative min-h-[100dvh] overflow-hidden bg-stone-950 dark:bg-surface-container"
-    >
-      {/* Pinned title */}
-      <div className="absolute top-8 md:top-12 left-6 md:left-10 z-10">
-        <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold-light dark:text-primary-bright mb-3">
-          Pool & Garden
-        </p>
-        <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-cream dark:text-on-surface mb-3">
-          Immerse & Unwind
-        </h2>
-        <p className="text-sm text-cream/60 dark:text-on-surface/50 max-w-[45ch] leading-relaxed">
-          Private pool — 50 × 10 metres, 4 ft deep. Lawn spanning approx.
-          400 sq. ft. with gazebo &amp; al fresco seating.
-        </p>
+    <section id="pool" className="py-24 lg:py-32 bg-stone-50 dark:bg-surface-low">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+          <div>
+            <SectionLabel>Pool &amp; Garden</SectionLabel>
+            <h2 className="font-outfit text-4xl lg:text-5xl font-light text-stone-800 dark:text-on-surface mt-4">
+              Immerse &amp;{" "}
+              <span className="italic text-amber-600 dark:text-primary-bright">
+                Unwind
+              </span>
+            </h2>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-6 lg:gap-10 lg:text-right">
+            <div>
+              <div className="text-2xl font-semibold text-stone-800 dark:text-on-surface">
+                50 × 10m
+              </div>
+              <div className="text-xs text-stone-400 dark:text-on-surface-dim tracking-widest uppercase mt-1">
+                Private Pool
+              </div>
+            </div>
+            <div>
+              <div className="text-2xl font-semibold text-stone-800 dark:text-on-surface">
+                4 ft
+              </div>
+              <div className="text-xs text-stone-400 dark:text-on-surface-dim tracking-widest uppercase mt-1">
+                Pool Depth
+              </div>
+            </div>
+            <div>
+              <div className="text-2xl font-semibold text-stone-800 dark:text-on-surface">
+                400 sq ft
+              </div>
+              <div className="text-xs text-stone-400 dark:text-on-surface-dim tracking-widest uppercase mt-1">
+                Private Lawn
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mosaic grid */}
+        <div className="grid lg:grid-cols-4 lg:grid-rows-2 gap-4 lg:gap-6 lg:h-[560px]">
+          {IMAGES.map((img, i) => (
+            <div
+              key={img.src}
+              className={`rounded-xl overflow-hidden cursor-pointer group relative ${img.span} ${
+                i === 0 ? "h-64 lg:h-auto" : "h-48 lg:h-auto"
+              }`}
+              onClick={() => setLightbox(img.src)}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes={
+                  i === 0
+                    ? "(max-width: 1024px) 100vw, 50vw"
+                    : "(max-width: 1024px) 100vw, 25vw"
+                }
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+            </div>
+          ))}
+        </div>
+
+        {/* Feature tags */}
+        <div className="mt-8 flex flex-wrap gap-4">
+          {TAGS.map((tag) => (
+            <span
+              key={tag}
+              className="px-4 py-2 border border-amber-200 dark:border-amber-600/40 text-amber-700 dark:text-amber-400 text-xs tracking-wider uppercase rounded-full bg-amber-50 dark:bg-amber-600/10"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
 
-      {/* Horizontal track */}
-      <div
-        ref={trackRef}
-        className="flex items-center gap-4 md:gap-6 h-[100dvh] pl-6 md:pl-10 pr-6 md:pr-10 pt-28 md:pt-32"
-        style={{ width: "fit-content" }}
-      >
-        {GALLERY_IMAGES.map((img, i) => (
-          <div
-            key={img.src}
-            className={`relative flex-shrink-0 rounded-xl overflow-hidden ${
-              i % 3 === 0
-                ? "w-[75vw] md:w-[45vw] aspect-[16/10]"
-                : i % 3 === 1
-                ? "w-[60vw] md:w-[35vw] aspect-[3/4]"
-                : "w-[70vw] md:w-[40vw] aspect-[4/3]"
-            }`}
-          >
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <div className="relative w-full max-w-5xl aspect-video">
             <Image
-              src={img.src}
-              alt={img.alt}
+              src={lightbox}
+              alt="Garden or pool gallery image"
               fill
-              sizes="(max-width: 768px) 75vw, 45vw"
-              className="object-cover"
+              className="object-contain rounded-lg"
+              sizes="100vw"
             />
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </section>
   );
 }
