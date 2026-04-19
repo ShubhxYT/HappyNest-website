@@ -1,75 +1,122 @@
 "use client";
 
-import { WhatsappLogo, Phone, MapPin } from "@phosphor-icons/react";
+import { MapPin, Phone, Mail, Share2, Share } from "lucide-react";
 
-const WHATSAPP_URL =
-  "https://wa.me/919971800880?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
+const NAV_LINKS = [
+  { label: "About", href: "#about" },
+  { label: "Bedrooms", href: "#bedrooms" },
+  { label: "Pool & Garden", href: "#pool" },
+  { label: "Amenities", href: "#amenities" },
+  { label: "Experiences", href: "#experiences" },
+  { label: "Location", href: "#location" },
+  { label: "House Rules", href: "#rules" },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-950 dark:bg-surface-container text-cream py-16 md:py-20">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-          {/* Brand */}
+    <footer className="bg-stone-900 dark:bg-surface-container text-white">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 lg:py-20">
+        <div className="grid md:grid-cols-3 gap-12 lg:gap-16 mb-12">
+          {/* Brand + Social */}
           <div>
-            <h3 className="font-outfit text-2xl tracking-tight mb-3">HappyNest</h3>
-            <p className="text-sm text-stone-400 dark:text-on-surface-dim leading-relaxed max-w-[35ch]">
-              Blanc Belle - A Luxury Farm Stay in Sohna, Haryana. Close enough
-              to the city, far enough to unwind.
+            <div className="mb-6">
+              <div className="font-outfit text-xl font-bold tracking-widest uppercase text-white">
+                HappyNest
+              </div>
+              <div className="font-satoshi text-xs tracking-[0.3em] uppercase text-amber-400 mt-1">
+                Blanc Belle
+              </div>
+            </div>
+            <p className="text-stone-400 text-sm leading-relaxed font-light">
+              A Luxury Farm Stay in Sohna, Haryana. Close enough to the city,
+              far enough to unwind.
             </p>
+            <div className="flex gap-4 mt-6">
+              <a
+                href="#"
+                aria-label="Social"
+                className="w-9 h-9 bg-stone-800 hover:bg-amber-600 rounded-full flex items-center justify-center transition-colors duration-200"
+              >
+                <Share2 size={15} />
+              </a>
+              <a
+                href="#"
+                aria-label="Social"
+                className="w-9 h-9 bg-stone-800 hover:bg-amber-600 rounded-full flex items-center justify-center transition-colors duration-200"
+              >
+                <Share size={15} />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xs tracking-[0.3em] uppercase text-stone-400 font-medium mb-6">
+              Quick Links
+            </h3>
+            <div className="flex flex-col gap-3">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-stone-400 hover:text-amber-400 text-sm transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-outfit text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-on-surface-dim mb-4">
+            <h3 className="text-xs tracking-[0.3em] uppercase text-stone-400 font-medium mb-6">
               Contact
-            </h4>
-            <div className="space-y-3">
+            </h3>
+            <div className="flex flex-col gap-4">
               <a
-                href={WHATSAPP_URL}
+                href="https://maps.google.com/maps?q=28.234944,77.165250"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sm text-stone-300 dark:text-on-surface hover:text-cream dark:hover:text-on-surface transition-colors"
+                className="flex items-start gap-3 text-stone-400 hover:text-amber-400 transition-colors"
               >
-                <WhatsappLogo size={18} weight="fill" />
-                WhatsApp - Book Now
+                <MapPin size={15} className="mt-0.5 flex-shrink-0" />
+                <span className="text-sm font-light">
+                  Sohna, Haryana
+                  <br />
+                  Near New Delhi, India
+                </span>
               </a>
               <a
                 href="tel:+919971800880"
-                className="flex items-center gap-3 text-sm text-stone-300 dark:text-on-surface hover:text-cream dark:hover:text-on-surface transition-colors"
+                className="flex items-center gap-3 text-stone-400 hover:text-amber-400 transition-colors"
               >
-                <Phone size={18} />
-                +91 99718 00880
+                <Phone size={15} className="flex-shrink-0" />
+                <span className="text-sm font-light">+91 99718 00880</span>
               </a>
-              <p className="flex items-start gap-3 text-sm text-stone-300 dark:text-on-surface">
-                <MapPin size={18} className="flex-shrink-0 mt-0.5" />
-                Sohna, Haryana (Near New Delhi)
-              </p>
+              <a
+                href="mailto:stay@happynestfarm.in"
+                className="flex items-center gap-3 text-stone-400 hover:text-amber-400 transition-colors"
+              >
+                <Mail size={15} className="flex-shrink-0" />
+                <span className="text-sm font-light">
+                  stay@happynestfarm.in
+                </span>
+              </a>
             </div>
-          </div>
-
-          {/* House Rules */}
-          <div>
-            <h4 className="font-outfit text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-on-surface-dim mb-4">
-              House Rules
-            </h4>
-            <ul className="space-y-2 text-sm text-stone-400 dark:text-on-surface-dim">
-              <li>Check-in: 2:00 PM</li>
-              <li>Check-out: 12:00 PM</li>
-              <li>Early check-in / late check-out subject to availability</li>
-              <li>Pets welcome</li>
-              <li>No access to villa kitchen</li>
-              <li>Visitor charges: ₹1,000 + taxes per person per day (up to 4 hrs)</li>
-            </ul>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-stone-800 dark:border-outline-faint/30">
-            <p className="text-xs text-stone-500 dark:text-on-surface-dim/70 text-center">
-            HappyNest - Blanc Belle. All rights reserved.
+        <div className="border-t border-stone-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-stone-500 text-xs">
+            &copy; {new Date().getFullYear()} HappyNest — Blanc Belle. All
+            rights reserved.
+          </p>
+          <p className="text-stone-600 text-xs">
+            Sohna, Haryana · A Luxury Farm Stay
           </p>
         </div>
       </div>
     </footer>
   );
 }
+
