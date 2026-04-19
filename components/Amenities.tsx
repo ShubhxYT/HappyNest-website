@@ -1,215 +1,97 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
-  SwimmingPool,
-  Bathtub,
-  Fire,
-  CookingPot,
-  WifiHigh,
-  Television,
-  Snowflake,
-  MonitorPlay,
-  SpeakerHigh,
-  GameController,
-  TShirt,
-  Flashlight,
-  SecurityCamera,
-  Wheelchair,
+  Wifi,
   Flame,
-  Warehouse,
-  Coffee,
-  Lockers,
-  Thermometer,
-  Cube,
-  Drop,
-  Towel,
-} from "@phosphor-icons/react";
-import type { Icon } from "@phosphor-icons/react";
-import type { Variants } from "framer-motion";
+  Dumbbell,
+  Car,
+  Utensils,
+  Music,
+  Tv,
+  Wind,
+  Dog,
+  Droplets,
+  Sun,
+  Gamepad2,
+} from "lucide-react";
+import SectionLabel from "./SectionLabel";
 
-interface AmenityItem {
-  icon: Icon;
-  label: string;
-  note?: string;
-}
-
-interface AmenityGroup {
-  title: string;
-  items: AmenityItem[];
-}
-
-const AMENITY_GROUPS: AmenityGroup[] = [
-  {
-    title: "Outdoor",
-    items: [
-      { icon: SwimmingPool, label: "Private Swimming Pool" },
-      { icon: Bathtub, label: "Outdoor Jacuzzi" },
-      { icon: Warehouse, label: "Lawn & Gazebo" },
-      { icon: Fire, label: "Bonfire", note: "₹2,000 / 3 hrs" },
-      { icon: CookingPot, label: "BBQ / Barbeque", note: "₹1,000" },
-    ],
-  },
-  {
-    title: "Indoor",
-    items: [
-      { icon: Snowflake, label: "AC in all rooms" },
-      { icon: WifiHigh, label: "Wi-Fi throughout" },
-      { icon: Television, label: "TV in all rooms" },
-      { icon: Flame, label: "Fireplace" },
-      { icon: Thermometer, label: "Heater" },
-      { icon: Cube, label: "Refrigerator" },
-      { icon: MonitorPlay, label: "Projector", note: "₹1,500" },
-      { icon: SpeakerHigh, label: "Music System" },
-      { icon: GameController, label: "Indoor & Outdoor Games" },
-    ],
-  },
-  {
-    title: "Convenience",
-    items: [
-      { icon: Lockers, label: "Wardrobe in all rooms" },
-      { icon: Coffee, label: "Electric Kettle" },
-      { icon: Drop, label: "Geyser in all bathrooms" },
-      { icon: Towel, label: "Towels & Basic Toiletries" },
-      { icon: TShirt, label: "Washing Machine, Iron & Clothes Dryer", note: "Complimentary" },
-      { icon: Flashlight, label: "Torch", note: "Complimentary" },
-      { icon: SecurityCamera, label: "CCTV Security" },
-      { icon: Wheelchair, label: "Wheelchair Friendly" },
-    ],
-  },
+const outdoor = [
+  { icon: Droplets, label: "Private Pool" },
+  { icon: Droplets, label: "Jacuzzi" },
+  { icon: Sun, label: "Sun Loungers" },
+  { icon: Gamepad2, label: "Outdoor Games" },
+  { icon: Flame, label: "Bonfire Setup" },
+  { icon: Utensils, label: "BBQ Grill" },
 ];
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-    },
-  },
-};
+const indoor = [
+  { icon: Wifi, label: "High-Speed Wi-Fi" },
+  { icon: Wind, label: "AC in All Rooms" },
+  { icon: Tv, label: "Smart TVs" },
+  { icon: Music, label: "Music Systems" },
+  { icon: Flame, label: "Fireplace" },
+  { icon: Gamepad2, label: "Table Tennis & Carrom" },
+];
 
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const },
-  },
-};
+const convenience = [
+  { icon: Car, label: "Parking" },
+  { icon: Dog, label: "Pet Friendly" },
+  { icon: Dumbbell, label: "Sports Equipment" },
+  { icon: Utensils, label: "Dining Service" },
+];
+
+const CATEGORIES = [
+  { label: "Outdoor", items: outdoor },
+  { label: "Indoor", items: indoor },
+  { label: "Convenience", items: convenience },
+];
 
 export default function Amenities() {
   return (
-    <section id="amenities" className="bg-cream dark:bg-surface py-24 md:py-36">
+    <section id="amenities" className="py-24 lg:py-32 bg-cream dark:bg-surface">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <p className="font-satoshi text-sm uppercase tracking-[0.25em] text-gold mb-4">
-            Amenities
-          </p>
-          <h2 className="font-outfit text-3xl md:text-5xl tracking-tighter leading-[1.1] text-stone-950 dark:text-on-surface">
-            Everything you need,
-            <br />
+        <div className="flex justify-center mb-4">
+          <SectionLabel>Amenities</SectionLabel>
+        </div>
+        <h2 className="font-outfit text-4xl lg:text-5xl font-light text-stone-800 dark:text-on-surface text-center mt-4 mb-16">
+          Everything you need,{" "}
+          <span className="italic text-amber-600 dark:text-primary-bright">
             nothing you don&apos;t
-          </h2>
-        </motion.div>
+          </span>
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 md:gap-20">
-          {/* Left column — first two groups */}
-          <div className="space-y-12">
-            {AMENITY_GROUPS.slice(0, 2).map((group) => (
-              <div key={group.title}>
-                <h3 className="font-outfit text-lg text-stone-950 dark:text-on-surface tracking-tight mb-6">
-                  {group.title}
-                </h3>
-                <motion.div
-                  className="space-y-0"
-                  variants={containerVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-50px" }}
-                >
-                  {group.items.map((item) => (
-                    <motion.div
-                      key={item.label}
-                      variants={itemVariants}
-                      className="flex items-center gap-4 py-4 border-t border-stone-200 dark:border-transparent"
-                    >
-                      <item.icon
-                        size={22}
-                        weight="regular"
-                        className="text-stone-500 dark:text-on-surface-dim flex-shrink-0"
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          {CATEGORIES.map((cat) => (
+            <div
+              key={cat.label}
+              className="bg-stone-50 dark:bg-surface-container rounded-2xl p-8"
+            >
+              <h3 className="text-xs tracking-[0.3em] uppercase text-amber-600 dark:text-primary-bright font-semibold mb-6">
+                {cat.label}
+              </h3>
+              <div className="flex flex-col gap-4">
+                {cat.items.map(({ icon: Icon, label }) => (
+                  <div key={label} className="flex items-center gap-4">
+                    <div className="w-9 h-9 bg-white dark:bg-surface-bright rounded-lg flex items-center justify-center shadow-sm flex-shrink-0">
+                      <Icon
+                        size={16}
+                        className="text-amber-600 dark:text-primary-bright"
                       />
-                      <span className="text-base text-stone-950 dark:text-on-surface font-medium">
-                        {item.label}
-                      </span>
-                      {item.note && (
-                        <span className="text-xs text-stone-400 dark:text-on-surface-dim/70 ml-auto">
-                          {item.note}
-                        </span>
-                      )}
-                    </motion.div>
-                  ))}
-                </motion.div>
+                    </div>
+                    <span className="text-stone-600 dark:text-on-surface-dim text-sm font-light">
+                      {label}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          {/* Right column — third group */}
-          <div>
-            {AMENITY_GROUPS.slice(2).map((group) => (
-              <div key={group.title}>
-                <h3 className="font-outfit text-lg text-stone-950 dark:text-on-surface tracking-tight mb-6">
-                  {group.title}
-                </h3>
-                <motion.div
-                  className="space-y-0"
-                  variants={containerVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-50px" }}
-                >
-                  {group.items.map((item) => (
-                    <motion.div
-                      key={item.label}
-                      variants={itemVariants}
-                      className="flex items-center gap-4 py-4 border-t border-stone-200 dark:border-transparent"
-                    >
-                      <item.icon
-                        size={22}
-                        weight="regular"
-                        className="text-stone-500 dark:text-on-surface-dim flex-shrink-0"
-                      />
-                      <span className="text-base text-stone-950 dark:text-on-surface font-medium">
-                        {item.label}
-                      </span>
-                      {item.note && (
-                        <span className="text-xs text-stone-400 dark:text-on-surface-dim/70 ml-auto">
-                          {item.note}
-                        </span>
-                      )}
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-xs text-stone-400 dark:text-on-surface-dim/70 mt-10"
-        >
+        <p className="text-center text-stone-400 dark:text-on-surface-dim text-xs mt-8 tracking-wide">
           All add-on costs subject to 18% GST.
-        </motion.p>
+        </p>
       </div>
     </section>
   );
