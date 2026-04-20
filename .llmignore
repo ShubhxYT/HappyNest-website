@@ -1,0 +1,3 @@
+# Exclude planning/draft artifacts from automated LLM analysis
+plans/
+plans/**
