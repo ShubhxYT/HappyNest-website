@@ -60,7 +60,7 @@ export default function CommonAreas() {
               key={area.title}
               className="group relative rounded-2xl overflow-hidden cursor-pointer"
             >
-              <div className="aspect-[16/10] overflow-hidden relative">
+              <div className="aspect-[4/5] md:aspect-[16/10] overflow-hidden relative">
                 <Image
                   src={area.image}
                   alt={area.title}
@@ -77,7 +77,7 @@ export default function CommonAreas() {
                 <h3 className="text-white text-xl font-semibold mb-2">
                   {area.title}
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white/70 text-sm leading-relaxed font-light">
                   {area.desc}
                 </p>
               </div>
