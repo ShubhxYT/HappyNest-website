@@ -97,7 +97,7 @@ export default function PoolGarden() {
             <div
               key={img.src}
               className={`rounded-xl overflow-hidden cursor-pointer group relative ${img.span} ${
-                i === 0 ? "h-64 lg:h-auto" : "h-48 lg:h-auto"
+                i === 0 ? "h-80 lg:h-auto" : "h-64 lg:h-auto"
               }`}
               onClick={() => setLightbox(img.src)}
             >

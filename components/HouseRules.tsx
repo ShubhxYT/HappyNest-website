@@ -97,10 +97,12 @@ export default function HouseRules() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919167928471"
+              href="https://wa.me/919167928471?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3.5 bg-white text-amber-700 font-semibold text-sm tracking-widest uppercase rounded hover:bg-amber-50 transition-colors"
             >
-              Call Us
+              Book Now
             </a>
             <a
               href="mailto:stay@happynestfarm.in"

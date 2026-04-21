@@ -84,7 +84,7 @@ export default function LivingAreas() {
                   ease: [0.16, 1, 0.3, 1],
                 }}
               >
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <div className="relative aspect-[3/4] md:aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
                     src={area.image}
                     alt={area.imageAlt}

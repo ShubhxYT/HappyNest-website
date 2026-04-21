@@ -186,7 +186,7 @@ export default function Spaces() {
             >
               <div
                 className={`relative transition-all duration-500 ${
-                  activeIndex === i ? "aspect-[4/3]" : "aspect-[16/7]"
+                  activeIndex === i ? "aspect-[3/4] md:aspect-[4/3]" : "aspect-[4/5] md:aspect-[16/7]"
                 }`}
               >
                 <Image
