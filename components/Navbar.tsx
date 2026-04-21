@@ -18,7 +18,7 @@ const NAV_LINKS = [
 ];
 
 const WHATSAPP_URL =
-  "https://wa.me/919971800880?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
+  "https://wa.me/919167928471?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
 
 export default function Navbar({ scrolled }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -116,10 +116,10 @@ export default function Navbar({ scrolled }: NavbarProps) {
               Book Now
             </a>
             <a
-              href="tel:+919971800880"
+              href="tel:+919167928471"
               className="inline-flex items-center justify-center text-sm text-stone-500 dark:text-on-surface-dim"
             >
-              +91 99718 00880
+              +91 91679 28471
             </a>
           </div>
         </div>

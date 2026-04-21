@@ -87,11 +87,11 @@ export default function Footer() {
                 </span>
               </a>
               <a
-                href="tel:+919971800880"
+                href="tel:+919167928471"
                 className="flex items-center gap-3 text-stone-400 hover:text-amber-400 transition-colors"
               >
                 <Phone size={15} className="flex-shrink-0" />
-                <span className="text-sm font-light">+91 99718 00880</span>
+                <span className="text-sm font-light">+91 91679 28471</span>
               </a>
               <a
                 href="mailto:stay@happynestfarm.in"
