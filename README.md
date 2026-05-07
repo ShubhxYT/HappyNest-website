@@ -10,6 +10,14 @@ I decided to build a website for it. Not because I'm a frontend developer (I'm n
 
 ---
 
+## Documentation
+
+- **[Design System](./docs/DESIGN.md)** - Complete design specifications
+- **[Property Details](./docs/property-details.md)** - Villa specifications and details
+- **[Development Guide](./docs/README.md)** - Development documentation
+
+---
+
 ## Deployment
 
 This website is **self-hosted** on our own server. It's live at **[happynestfarm.in](https://happynestfarm.in)** — our own domain, our own infrastructure.
