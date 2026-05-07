@@ -1,7 +1,7 @@
 "use client";
 
 import { MapPin, Navigation } from "lucide-react";
-import SectionLabel from "./SectionLabel";
+import SectionLabel from "@/components/ui/SectionLabel";
 
 const ATTRACTIONS = [
   { name: "Sohna Hot Springs", dist: "5 min drive" },

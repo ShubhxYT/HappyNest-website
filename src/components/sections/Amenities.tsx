@@ -14,7 +14,7 @@ import {
   Sun,
   Gamepad2,
 } from "lucide-react";
-import SectionLabel from "./SectionLabel";
+import SectionLabel from "@/components/ui/SectionLabel";
 
 const outdoor = [
   { icon: Droplets, label: "Private Pool" },

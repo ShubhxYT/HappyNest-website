@@ -9,7 +9,7 @@ import {
   FileText,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import SectionLabel from "./SectionLabel";
+import SectionLabel from "@/components/ui/SectionLabel";
 
 interface Rule {
   icon: LucideIcon;

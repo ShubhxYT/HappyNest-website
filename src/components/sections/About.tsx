@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Users, BedDouble, Bath, Clock } from "lucide-react";
-import SectionLabel from "./SectionLabel";
+import SectionLabel from "@/components/ui/SectionLabel";
 
 const STATS = [
   { icon: Users, value: "18", label: "Max Guests" },

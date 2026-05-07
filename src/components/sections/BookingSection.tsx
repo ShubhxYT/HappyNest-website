@@ -13,7 +13,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { WhatsappLogo } from "@phosphor-icons/react";
-import SectionLabel from "./SectionLabel";
+import SectionLabel from "@/components/ui/SectionLabel";
 import {
   type BookingData,
   EMPTY_BOOKING,

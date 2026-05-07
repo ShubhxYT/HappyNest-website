@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import SectionLabel from "./SectionLabel";
+import SectionLabel from "@/components/ui/SectionLabel";
 
 interface GardenImage {
   src: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import SectionLabel from "./SectionLabel";
+import SectionLabel from "@/components/ui/SectionLabel";
 
 interface Area {
   title: string;
