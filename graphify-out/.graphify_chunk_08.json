@@ -1,0 +1,514 @@
+{
+  "nodes": [
+    {
+      "id": "single_sofa_up",
+      "label": "Sofa Up",
+      "file_type": "image",
+      "source_file": "happynest/single/sofa-up.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "single_dining_entrance",
+      "label": "Dining Entrance",
+      "file_type": "image",
+      "source_file": "happynest/single/dining-entrance.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "single_sofa_ground",
+      "label": "Sofa Ground",
+      "file_type": "image",
+      "source_file": "happynest/single/sofa-ground.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "single_entrance",
+      "label": "Entrance",
+      "file_type": "image",
+      "source_file": "happynest/single/entrance.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "single_main_dining",
+      "label": "Main Dining",
+      "file_type": "image",
+      "source_file": "happynest/single/main-dining.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "single_tt_table_sofa_up",
+      "label": "Tt Table Sofa Up",
+      "file_type": "image",
+      "source_file": "happynest/single/tt-table-sofa-up.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "single_sofa_ground2",
+      "label": "Sofa Ground2",
+      "file_type": "image",
+      "source_file": "happynest/single/sofa-ground2.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "single_main_big_balcony",
+      "label": "Main Big Balcony",
+      "file_type": "image",
+      "source_file": "happynest/single/main-big-balcony.jpeg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_lime1",
+      "label": "Lime1",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/lime1.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_lime2",
+      "label": "Lime2",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/lime2.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_brown2",
+      "label": "Brown2",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/brown2.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_blue2",
+      "label": "Blue2",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/blue2.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_green1",
+      "label": "Green1",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/green1.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_brown1",
+      "label": "Brown1",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/brown1.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_blue1",
+      "label": "Blue1",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/blue1.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_green2",
+      "label": "Green2",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/green2.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_grey4",
+      "label": "Grey4",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/grey4.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_grey1",
+      "label": "Grey1",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/grey1.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_grey2",
+      "label": "Grey2",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/grey2.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bedrooms_grey3",
+      "label": "Grey3",
+      "file_type": "image",
+      "source_file": "happynest/Bedrooms/grey3.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bathrooms_happy_nest_4cc357",
+      "label": "Happy Nest 4Cc357",
+      "file_type": "image",
+      "source_file": "happynest/bathrooms/happy-nest-4cc357.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bathrooms_happy_nest_cfb710",
+      "label": "Happy Nest Cfb710",
+      "file_type": "image",
+      "source_file": "happynest/bathrooms/happy-nest-cfb710.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "single_dining_entrance",
+      "target": "single_sofa_up",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.83,
+      "source_file": "happynest/single/dining-entrance.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "single_sofa_ground",
+      "target": "single_sofa_up",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.83,
+      "source_file": "happynest/single/sofa-ground.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "single_entrance",
+      "target": "single_sofa_up",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.83,
+      "source_file": "happynest/single/entrance.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "single_main_dining",
+      "target": "single_sofa_up",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.83,
+      "source_file": "happynest/single/main-dining.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "single_tt_table_sofa_up",
+      "target": "single_sofa_up",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.83,
+      "source_file": "happynest/single/tt-table-sofa-up.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "single_sofa_ground2",
+      "target": "single_sofa_up",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.83,
+      "source_file": "happynest/single/sofa-ground2.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "single_main_big_balcony",
+      "target": "single_sofa_up",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.83,
+      "source_file": "happynest/single/main-big-balcony.jpeg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_lime2",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/lime2.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_brown2",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/brown2.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_blue2",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/blue2.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_green1",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/green1.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_brown1",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/brown1.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_blue1",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/blue1.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_green2",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/green2.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_grey4",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/grey4.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_grey1",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/grey1.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_grey2",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/grey2.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_grey3",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "happynest/Bedrooms/grey3.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bathrooms_happy_nest_cfb710",
+      "target": "bathrooms_happy_nest_4cc357",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "happynest/bathrooms/happy-nest-cfb710.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "single_sofa_up",
+      "target": "bedrooms_lime1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.78,
+      "source_file": "happynest/single/sofa-up.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bedrooms_lime1",
+      "target": "bathrooms_happy_nest_4cc357",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.74,
+      "source_file": "happynest/Bedrooms/lime1.jpg",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "single_living_spaces_gallery",
+      "label": "Single Unit Living Spaces",
+      "nodes": [
+        "single_sofa_up",
+        "single_dining_entrance",
+        "single_sofa_ground",
+        "single_entrance",
+        "single_main_dining",
+        "single_tt_table_sofa_up",
+        "single_sofa_ground2",
+        "single_main_big_balcony"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.84,
+      "source_file": "happynest/single/sofa-up.jpg"
+    },
+    {
+      "id": "bedrooms_gallery_set",
+      "label": "Bedrooms Gallery Set",
+      "nodes": [
+        "bedrooms_lime1",
+        "bedrooms_lime2",
+        "bedrooms_brown2",
+        "bedrooms_blue2",
+        "bedrooms_green1",
+        "bedrooms_brown1",
+        "bedrooms_blue1",
+        "bedrooms_green2",
+        "bedrooms_grey4",
+        "bedrooms_grey1",
+        "bedrooms_grey2",
+        "bedrooms_grey3"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.84,
+      "source_file": "happynest/Bedrooms/lime1.jpg"
+    },
+    {
+      "id": "bathrooms_gallery_set",
+      "label": "Bathrooms Gallery Set",
+      "nodes": [
+        "bathrooms_happy_nest_4cc357",
+        "bathrooms_happy_nest_cfb710"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.88,
+      "source_file": "happynest/bathrooms/happy-nest-4cc357.jpg"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

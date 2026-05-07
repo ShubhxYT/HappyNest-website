@@ -1,0 +1,117 @@
+{
+  "chunk": 7,
+  "task": "semantic_extraction",
+  "modality": "image",
+  "files": [
+    {
+      "path": "public/images/hero-frames/frame-0030.webp",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/hero-frames/frame-0026.webp",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/hero-frames/frame-0071.webp",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/hero-frames/frame-0084.webp",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/hero-frames/frame-0006.webp",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/hero-frames/frame-0051.webp",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/hero-frames/frame-0047.webp",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/hero-frames/frame-0010.webp",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/curated/BonfireNights.png",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/curated/private-celeb.png",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/curated/terrace.png",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/curated/barbeque.png",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "public/images/curated/breakfast.png",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/garden2.jpg",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/garden3.jpg",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/drone-3.jpg",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/drone-2.jpg",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/garden.jpg",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/drone-1.jpg",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/pool1.jpg",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/pool3.jpg",
+      "type": "image",
+      "semantic_extract": true
+    },
+    {
+      "path": "happynest/Garden/pool2.jpg",
+      "type": "image",
+      "semantic_extract": true
+    }
+  ]
+}

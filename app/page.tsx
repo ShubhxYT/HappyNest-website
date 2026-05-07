@@ -13,6 +13,7 @@ import Meals from "@/components/Meals";
 import Experiences from "@/components/Experiences";
 import Location from "@/components/Location";
 import HouseRules from "@/components/HouseRules";
+import BookingSection from "@/components/BookingSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
         <Experiences />
         <Location />
         <HouseRules />
+        <BookingSection />
       </main>
       <Footer />
       <WhatsAppFab />

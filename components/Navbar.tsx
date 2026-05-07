@@ -17,8 +17,7 @@ const NAV_LINKS = [
   { label: "Location", href: "#location" },
 ];
 
-const WHATSAPP_URL =
-  "https://wa.me/919167928471?text=Hi%2C%20I%27d%20like%20to%20book%20HappyNest%20Blanc%20Belle";
+const BOOKING_HREF = "#booking";
 
 export default function Navbar({ scrolled }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -69,9 +68,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
           ))}
           <ThemeToggle />
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={BOOKING_HREF}
             className="ml-2 px-5 py-2.5 bg-amber-600 hover:bg-amber-700 dark:bg-primary-bright dark:text-surface dark:hover:opacity-90 text-white text-xs tracking-[0.15em] uppercase font-semibold rounded transition-colors duration-200"
           >
             Book Now
@@ -108,9 +105,8 @@ export default function Navbar({ scrolled }: NavbarProps) {
               </a>
             ))}
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={BOOKING_HREF}
+              onClick={() => setMenuOpen(false)}
               className="mt-2 px-5 py-3 bg-amber-600 hover:bg-amber-700 text-white text-sm tracking-widest uppercase font-semibold rounded text-center transition-colors"
             >
               Book Now

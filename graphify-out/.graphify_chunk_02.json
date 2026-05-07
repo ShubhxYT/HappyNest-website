@@ -1,0 +1,389 @@
+{
+  "nodes": [
+    {
+      "id": "public_images_garden_pool2_jpg",
+      "label": "pool2.jpg",
+      "file_type": "image",
+      "source_file": "public/images/garden/pool2.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_single_sofa_up_jpg",
+      "label": "sofa-up.jpg",
+      "file_type": "image",
+      "source_file": "public/images/single/sofa-up.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_single_dining_entrance_jpg",
+      "label": "dining-entrance.jpg",
+      "file_type": "image",
+      "source_file": "public/images/single/dining-entrance.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_single_sofa_ground_jpg",
+      "label": "sofa-ground.jpg",
+      "file_type": "image",
+      "source_file": "public/images/single/sofa-ground.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_single_entrance_jpg",
+      "label": "entrance.jpg",
+      "file_type": "image",
+      "source_file": "public/images/single/entrance.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_single_main_dining_jpg",
+      "label": "main-dining.jpg",
+      "file_type": "image",
+      "source_file": "public/images/single/main-dining.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_single_tt_table_sofa_up_jpg",
+      "label": "tt-table-sofa-up.jpg",
+      "file_type": "image",
+      "source_file": "public/images/single/tt-table-sofa-up.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_single_sofa_ground2_jpg",
+      "label": "sofa-ground2.jpg",
+      "file_type": "image",
+      "source_file": "public/images/single/sofa-ground2.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_single_main_big_balcony_jpeg",
+      "label": "main-big-balcony.jpeg",
+      "file_type": "image",
+      "source_file": "public/images/single/main-big-balcony.jpeg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_lime1_jpg",
+      "label": "lime1.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/lime1.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_lime2_jpg",
+      "label": "lime2.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/lime2.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_brown2_jpg",
+      "label": "brown2.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/brown2.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_blue2_jpg",
+      "label": "blue2.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/blue2.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_green1_jpg",
+      "label": "green1.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/green1.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_brown1_jpg",
+      "label": "brown1.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/brown1.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_blue1_jpg",
+      "label": "blue1.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/blue1.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_green2_jpg",
+      "label": "green2.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/green2.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_grey4_jpg",
+      "label": "grey4.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/grey4.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_grey1_jpg",
+      "label": "grey1.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/grey1.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_grey2_jpg",
+      "label": "grey2.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/grey2.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bedrooms_grey3_jpg",
+      "label": "grey3.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bedrooms/grey3.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "public_images_bathrooms_happy_nest_4cc357_jpg",
+      "label": "happy-nest-4cc357.jpg",
+      "file_type": "image",
+      "source_file": "public/images/bathrooms/happy-nest-4cc357.jpg",
+      "source_location": "L1"
+    },
+    {
+      "id": "collection_public_images_garden",
+      "label": "garden images",
+      "file_type": "image_collection",
+      "source_file": "public/images/garden",
+      "source_location": "L1"
+    },
+    {
+      "id": "collection_public_images_single",
+      "label": "single-floor images",
+      "file_type": "image_collection",
+      "source_file": "public/images/single",
+      "source_location": "L1"
+    },
+    {
+      "id": "collection_public_images_bedrooms",
+      "label": "bedroom images",
+      "file_type": "image_collection",
+      "source_file": "public/images/bedrooms",
+      "source_location": "L1"
+    },
+    {
+      "id": "collection_public_images_bathrooms",
+      "label": "bathroom images",
+      "file_type": "image_collection",
+      "source_file": "public/images/bathrooms",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "collection_public_images_garden",
+      "target": "public_images_garden_pool2_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/garden/pool2.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_single",
+      "target": "public_images_single_sofa_up_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/single/sofa-up.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_single",
+      "target": "public_images_single_dining_entrance_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/single/dining-entrance.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_single",
+      "target": "public_images_single_sofa_ground_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/single/sofa-ground.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_single",
+      "target": "public_images_single_entrance_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/single/entrance.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_single",
+      "target": "public_images_single_main_dining_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/single/main-dining.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_single",
+      "target": "public_images_single_tt_table_sofa_up_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/single/tt-table-sofa-up.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_single",
+      "target": "public_images_single_sofa_ground2_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/single/sofa-ground2.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_single",
+      "target": "public_images_single_main_big_balcony_jpeg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/single/main-big-balcony.jpeg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_lime1_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/lime1.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_lime2_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/lime2.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_brown2_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/brown2.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_blue2_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/blue2.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_green1_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/green1.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_brown1_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/brown1.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_blue1_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/blue1.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_green2_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/green2.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_grey4_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/grey4.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_grey1_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/grey1.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_grey2_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/grey2.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bedrooms",
+      "target": "public_images_bedrooms_grey3_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bedrooms/grey3.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "collection_public_images_bathrooms",
+      "target": "public_images_bathrooms_happy_nest_4cc357_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/bathrooms/happy-nest-4cc357.jpg",
+      "source_location": "L1",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

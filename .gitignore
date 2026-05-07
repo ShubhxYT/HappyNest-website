@@ -40,6 +40,16 @@ happynest
 *.tsbuildinfo
 next-env.d.ts
 
+# booking leads (contains personal data — keep on server only)
+/data/leads.csv
+
+# CSV and data files
+*.csv
+data/
+
+# logs
+*.log
+
 # Source video (frames extracted to public/images/hero-frames/)
 # public/video/drone-entrance.mp4
 

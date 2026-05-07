@@ -1,0 +1,401 @@
+{
+  "nodes": [
+    {
+      "id": "hero_frames_chunk_04",
+      "label": "Hero Frames Chunk 04",
+      "file_type": "image_collection",
+      "source_file": "public/images/hero-frames",
+      "source_location": "chunk_04"
+    },
+    {
+      "id": "frame_0003",
+      "label": "frame-0003.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0003.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0004",
+      "label": "frame-0004.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0004.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0012",
+      "label": "frame-0012.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0012.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0019",
+      "label": "frame-0019.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0019.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0023",
+      "label": "frame-0023.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0023.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0024",
+      "label": "frame-0024.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0024.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0028",
+      "label": "frame-0028.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0028.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0032",
+      "label": "frame-0032.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0032.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0035",
+      "label": "frame-0035.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0035.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0039",
+      "label": "frame-0039.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0039.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0045",
+      "label": "frame-0045.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0045.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0053",
+      "label": "frame-0053.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0053.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0054",
+      "label": "frame-0054.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0054.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0058",
+      "label": "frame-0058.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0058.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0062",
+      "label": "frame-0062.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0062.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0065",
+      "label": "frame-0065.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0065.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0069",
+      "label": "frame-0069.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0069.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0074",
+      "label": "frame-0074.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0074.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0078",
+      "label": "frame-0078.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0078.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0081",
+      "label": "frame-0081.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0081.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0086",
+      "label": "frame-0086.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0086.webp",
+      "source_location": "L1"
+    },
+    {
+      "id": "frame_0090",
+      "label": "frame-0090.webp",
+      "file_type": "image",
+      "source_file": "public/images/hero-frames/frame-0090.webp",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0003",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0003.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0004",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0004.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0012",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0012.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0019",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0019.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0023",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0023.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0024",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0024.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0028",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0028.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0032",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0032.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0035",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0035.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0039",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0039.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0045",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0045.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0053",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0053.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0054",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0054.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0058",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0058.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0062",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0062.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0065",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0065.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0069",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0069.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0074",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0074.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0078",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0078.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0081",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0081.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0086",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0086.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_frames_chunk_04",
+      "target": "frame_0090",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames/frame-0090.webp",
+      "source_location": "L1",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hero_frame_sequence_chunk_04",
+      "relation": "ordered_sequence",
+      "nodes": [
+        "frame_0003",
+        "frame_0004",
+        "frame_0012",
+        "frame_0019",
+        "frame_0023",
+        "frame_0024",
+        "frame_0028",
+        "frame_0032",
+        "frame_0035",
+        "frame_0039",
+        "frame_0045",
+        "frame_0053",
+        "frame_0054",
+        "frame_0058",
+        "frame_0062",
+        "frame_0065",
+        "frame_0069",
+        "frame_0074",
+        "frame_0078",
+        "frame_0081",
+        "frame_0086",
+        "frame_0090"
+      ],
+      "confidence": "EXTRACTED",
+      "source_file": "public/images/hero-frames",
+      "source_location": "chunk_04",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
