@@ -17,7 +17,15 @@ export default function ChatWidget() {
   } = useChatSession();
 
   const close = useCallback(() => setIsOpen(false), []);
-  const toggle = useCallback(() => setIsOpen((v) => !v), []);
+  const toggle = useCallback(() => {
+    setIsOpen((v) => {
+      const next = !v;
+      if (typeof window !== "undefined" && next) {
+        window.dispatchEvent(new CustomEvent("chat_widget_opened"));
+      }
+      return next;
+    });
+  }, []);
 
   return (
     <>
