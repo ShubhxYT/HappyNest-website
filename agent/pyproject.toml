@@ -1,0 +1,26 @@
+[project]
+name = "cag-agent"
+version = "0.1.0"
+description = "Cache-Augmented Generation chatbot for HappyNest Blanc Belle"
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=1.30",
+    "httpx>=0.27",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+    "typer>=0.12",
+    "rich>=13.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-httpx>=0.30",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
