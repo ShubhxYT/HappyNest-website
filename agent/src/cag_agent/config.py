@@ -26,3 +26,28 @@ class Settings(BaseModel):
     max_tokens: int = 20000
     temperature: float = 0.3
     timeout: int = 60
+
+    # Supabase (server-side persistence)
+    supabase_url: str = Field(
+        default_factory=lambda: os.getenv("SUPABASE_URL", "")
+    )
+    supabase_service_role_key: str = Field(
+        default_factory=lambda: os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+    )
+
+    # API server
+    api_host: str = Field(
+        default_factory=lambda: os.getenv("CAG_API_HOST", "0.0.0.0")
+    )
+    api_port: int = Field(
+        default_factory=lambda: int(os.getenv("CAG_API_PORT", "8000"))
+    )
+    cors_origins: list[str] = Field(
+        default_factory=lambda: [
+            origin.strip()
+            for origin in os.getenv(
+                "CAG_API_CORS_ORIGINS", "http://localhost:3000"
+            ).split(",")
+            if origin.strip()
+        ]
+    )

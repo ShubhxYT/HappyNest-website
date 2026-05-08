@@ -58,6 +58,47 @@ npm start
 
 ---
 
+## Running the AI chat agent
+
+The chat widget on the website is powered by a FastAPI service that wraps
+the existing `LLMClient` (OpenRouter primary, NVIDIA NIM fallback) and
+persists every turn to a self-hosted Supabase Postgres.
+
+### One-time setup
+
+```bash
+make install                            # uv sync + npm install
+cp agent/.env.example agent/.env        # fill in keys + SUPABASE_*
+cp -n .env.example .env.local           # set AGENT_API_URL=http://localhost:8000
+```
+
+Apply the SQL in `agent/supabase/migrations/001_create_chat_tables.sql`
+to your self-hosted Supabase project (Studio → SQL Editor → Run).
+
+### Run everything in dev
+
+```bash
+make dev          # runs FastAPI (--reload) on :8000 and Next.js on :3000
+```
+
+### Run them individually
+
+```bash
+make agent-server-reload                                    # via Typer command
+# OR raw uvicorn:
+cd agent && uv run uvicorn cag_agent.api:app --reload --port 8000
+
+make web-dev
+```
+
+### Health check
+
+```bash
+curl http://localhost:8000/health
+```
+
+---
+
 ## License
 
 MIT — Use it, fork it, build on it. That's the spirit of sharing.

@@ -10,7 +10,13 @@ dependencies = [
     "python-dotenv>=1.0",
     "typer>=0.12",
     "rich>=13.0",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "supabase>=2.7",
 ]
+
+[project.scripts]
+cag-agent = "cag_agent.cli:app"
 
 [dependency-groups]
 dev = [
