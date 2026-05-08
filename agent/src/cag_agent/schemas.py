@@ -28,6 +28,27 @@ class HistoryResponse(BaseModel):
     messages: list[ChatMessage]
 
 
+class LeadRequest(BaseModel):
+    timestamp: str
+    full_name: str = Field(min_length=1, max_length=500)
+    phone: str | None = None
+    email: str | None = None
+    check_in: str | None = None
+    check_out: str | None = None
+    guests: int | None = None
+    children: int | None = None
+    pets: int | None = None
+    budget: str | None = None
+    special_requests: str | None = None
+    source: str | None = None
+
+
+class LeadResponse(BaseModel):
+    ok: bool
+    id: str | None = None
+    error: str | None = None
+
+
 class HealthResponse(BaseModel):
     status: Literal["ok"]
     version: str

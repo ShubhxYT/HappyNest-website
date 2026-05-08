@@ -31,14 +31,14 @@ agent-test:
 	cd agent && uv run cag-agent test
 
 web-dev:
-	npm run dev
+	npm run dev -- -H 0.0.0.0
 
 web-build:
 	npm run build
 
 dev:
-	@echo "Starting agent (reload) on :8000 and Next.js dev server in parallel..."
+	@echo "Starting agent (reload) on :8000 and Next.js dev server on 0.0.0.0:3000 in parallel..."
 	@trap 'kill 0' SIGINT SIGTERM EXIT; \
 		(cd agent && uv run cag-agent server --reload) & \
-		npm run dev & \
+		npm run dev -- -H 0.0.0.0 & \
 		wait

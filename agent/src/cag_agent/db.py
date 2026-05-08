@@ -76,3 +76,11 @@ def get_history(session_id: str) -> list[dict]:
         .execute()
     )
     return res.data or []
+
+
+def insert_lead(data: dict) -> str:
+    """Insert a lead into happynest_leads and return its UUID."""
+    res = _client().table("happynest_leads").insert(data).execute()
+    if not res.data:
+        raise RuntimeError("Failed to create lead in Supabase")
+    return str(res.data[0]["id"])

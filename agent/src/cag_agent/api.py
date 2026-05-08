@@ -20,13 +20,15 @@ from starlette.concurrency import iterate_in_threadpool
 
 from cag_agent import __version__
 from cag_agent.config import Settings
-from cag_agent.db import create_session, get_history, insert_message
+from cag_agent.db import create_session, get_history, insert_lead, insert_message
 from cag_agent.llm import LLMClient
 from cag_agent.schemas import (
     ChatMessage,
     ChatRequest,
     HealthResponse,
     HistoryResponse,
+    LeadRequest,
+    LeadResponse,
 )
 
 logger = logging.getLogger(__name__)
@@ -121,3 +123,14 @@ def chat_history(session_id: str) -> HistoryResponse:
         session_id=session_id,
         messages=[ChatMessage(**row) for row in rows],
     )
+
+
+@app.post("/leads", response_model=LeadResponse)
+async def create_lead(req: LeadRequest) -> LeadResponse:
+    try:
+        lead_data = req.model_dump(exclude_none=True)
+        lead_id = insert_lead(lead_data)
+        return LeadResponse(ok=True, id=lead_id)
+    except Exception as exc:
+        logger.exception("Failed to create lead")
+        return LeadResponse(ok=False, error=str(exc))
