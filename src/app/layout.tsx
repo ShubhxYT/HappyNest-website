@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ChatWidget from "@/components/layout/ChatWidget";
 
 export const metadata: Metadata = {
   title: "HappyNest — Blanc Belle | Luxury Farm Stay, Sohna",
@@ -91,7 +92,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <ChatWidget />
+      </body>
     </html>
   );
 }

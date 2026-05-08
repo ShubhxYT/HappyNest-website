@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
-import WhatsAppFab from "@/components/layout/WhatsAppFab";
 import VideoHero from "@/components/sections/VideoHero";
 import About from "@/components/sections/About";
 import Bedrooms from "@/components/sections/Bedrooms";
@@ -42,7 +41,6 @@ export default function Home() {
         <BookingSection />
       </main>
       <Footer />
-      <WhatsAppFab />
     </>
   );
 }
