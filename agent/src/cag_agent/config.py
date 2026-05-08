@@ -17,8 +17,8 @@ class Settings(BaseModel):
         default_factory=lambda: os.getenv("OPENROUTER_API_KEY", "")
     )
 
-    nvidia_model: str = "deepseek-ai/deepseek-v4"
-    openrouter_model: str = "google/gemini-1.5-flash"
+    nvidia_model: str = "minimaxai/minimax-m2.7"
+    openrouter_model: str = "google/gemini-3.1-flash-lite"
 
     nvidia_base_url: str = "https://integrate.api.nvidia.com/v1"
     openrouter_base_url: str = "https://openrouter.ai/api/v1"

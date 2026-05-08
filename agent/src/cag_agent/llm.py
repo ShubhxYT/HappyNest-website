@@ -15,7 +15,7 @@ SYSTEM_TEMPLATE = (
 
 
 class LLMClient:
-    """Chat client that tries NVIDIA NIM first, then OpenRouter fallback."""
+    """Chat client that tries OpenRouter first, then NVIDIA NIM fallback."""
 
     def __init__(self, settings: Settings | None = None):
         self.settings = settings or Settings()
@@ -43,12 +43,12 @@ class LLMClient:
         )
 
     def ask_stream(self, question: str):
-        """Yield answer text chunks, falling back from NVIDIA to OpenRouter."""
+        """Yield answer text chunks, falling back from OpenRouter to NVIDIA."""
         try:
             stream = self._stream_provider(
-                self.settings.nvidia_base_url,
-                self.settings.nvidia_api_key,
-                self.settings.nvidia_model,
+                self.settings.openrouter_base_url,
+                self.settings.openrouter_api_key,
+                self.settings.openrouter_model,
                 question,
             )
             for chunk in stream:
@@ -61,9 +61,9 @@ class LLMClient:
 
         try:
             stream = self._stream_provider(
-                self.settings.openrouter_base_url,
-                self.settings.openrouter_api_key,
-                self.settings.openrouter_model,
+                self.settings.nvidia_base_url,
+                self.settings.nvidia_api_key,
+                self.settings.nvidia_model,
                 question,
             )
             for chunk in stream:

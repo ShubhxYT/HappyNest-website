@@ -1,3 +1,0 @@
-  warning: could not transcribe drone-entrance.mp4: Video transcription requires faster-whisper. Run: pip install 'graphifyy[video]'
-  warning: could not transcribe public/video/drone-entrance.mp4: Video transcription requires faster-whisper. Run: pip install 'graphifyy[video]'
-[]
