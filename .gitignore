@@ -18,6 +18,7 @@ next.config.ts
 
 # production
 /build
+agent/tests/__pycache__
 
 # misc
 .DS_Store
@@ -30,8 +31,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files
-.env*.local
-agent/.env
+.env
 
 # vercel
 .vercel

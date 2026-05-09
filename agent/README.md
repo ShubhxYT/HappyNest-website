@@ -7,8 +7,7 @@ Cache-Augmented Generation (CAG) chatbot for HappyNest Blanc Belle FAQ.
 ```bash
 cd agent
 uv sync
-cp .env.example .env
-# Edit .env and add your NVIDIA_API_KEY and OPENROUTER_API_KEY
+# Edit ../.env and add your NVIDIA_API_KEY and OPENROUTER_API_KEY
 ```
 
 ## Usage
@@ -49,7 +48,7 @@ RUN_INTEGRATION_TESTS=1 uv run pytest
 agent/
 ├── src/cag_agent/
 │   ├── __init__.py
-│   ├── config.py          # Pydantic settings
+│   ├── config.py          # Pydantic settings (loads from root .env.local)
 │   ├── knowledge.py       # Markdown knowledge loader
 │   ├── llm.py             # Dual-provider LLM client
 │   └── cli.py             # Typer CLI
@@ -59,7 +58,6 @@ agent/
 │   └── test_integration.py
 ├── pyproject.toml
 ├── .python-version
-├── .env.example
 └── README.md
 ```
 
@@ -72,6 +70,7 @@ agent/
 
 ## Deployment Notes
 
-- The `agent/` directory is completely isolated from the Next.js frontend.
+- All environment variables live in the root `.env` file.
+- The agent reads from `../.env` relative to its source directory.
 - A FastAPI wrapper can be added later in `src/cag_agent/main.py`.
 - Dockerize separately or deploy as a serverless function.

@@ -1,10 +1,12 @@
 """Application settings loaded from environment variables."""
 
 import os
+from pathlib import Path
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 
-load_dotenv()
+# Load from project root .env.local (3 levels up from this file)
+load_dotenv(Path(__file__).resolve().parents[3] / ".env")
 
 
 class Settings(BaseModel):
