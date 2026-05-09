@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3000"
     environment:
       - NODE_ENV=production
       - AGENT_API_URL=http://backend:8000
@@ -20,7 +20,7 @@ services:
       context: .
       dockerfile: agent/Dockerfile
     ports:
-      - "8000:8000"
+      - "8000"
     environment:
       - NVIDIA_API_KEY=${NVIDIA_API_KEY}
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
