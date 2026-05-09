@@ -37,6 +37,7 @@ agent/.env
 .vercel
 .github
 happynest
+.opencode
 
 # typescript
 *.tsbuildinfo
@@ -65,4 +66,5 @@ CLAUDE.md
 graphify-out
 agent/src/cag_agent/__pycache__
 agent/src/agent
+opencode.jsonc
 

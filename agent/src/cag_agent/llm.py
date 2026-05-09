@@ -1,8 +1,12 @@
 """Dual-provider LLM client with CAG prompt injection."""
 
+import logging
+
 from openai import OpenAI, APIError
 from cag_agent.config import Settings
 from cag_agent.knowledge import load_knowledge
+
+logger = logging.getLogger(__name__)
 
 SYSTEM_TEMPLATE = (
     "You are HappyNest Blanc Belle's virtual assistant. "
@@ -56,8 +60,8 @@ class LLMClient:
                 if delta:
                     yield delta
             return
-        except APIError:
-            pass
+        except APIError as exc:
+            logger.warning("OpenRouter failed (%s): %s", type(exc).__name__, exc)
 
         try:
             stream = self._stream_provider(

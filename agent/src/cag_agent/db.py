@@ -20,14 +20,14 @@ logger = logging.getLogger(__name__)
 @lru_cache(maxsize=1)
 def _client() -> Client:
     settings = Settings()
-    if not settings.supabase_url or not settings.supabase_service_role_key:
+    if not settings.supabase_url or not settings.SUPABASE_KEY:
         raise RuntimeError(
-            "SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set "
+            "SUPABASE_URL and SUPABASE_KEY must be set "
             "to use the chat persistence layer."
         )
     return create_client(
         settings.supabase_url,
-        settings.supabase_service_role_key,
+        settings.SUPABASE_KEY,
     )
 
 

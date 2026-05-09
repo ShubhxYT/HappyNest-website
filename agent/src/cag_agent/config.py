@@ -23,7 +23,7 @@ class Settings(BaseModel):
     nvidia_base_url: str = "https://integrate.api.nvidia.com/v1"
     openrouter_base_url: str = "https://openrouter.ai/api/v1"
 
-    max_tokens: int = 20000
+    max_tokens: int = 2048
     temperature: float = 0.3
     timeout: int = 60
 
@@ -31,8 +31,8 @@ class Settings(BaseModel):
     supabase_url: str = Field(
         default_factory=lambda: os.getenv("SUPABASE_URL", "")
     )
-    supabase_service_role_key: str = Field(
-        default_factory=lambda: os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+    SUPABASE_KEY: str = Field(
+        default_factory=lambda: os.getenv("SUPABASE_KEY", "")
     )
 
     # API server
