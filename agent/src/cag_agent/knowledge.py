@@ -1,8 +1,9 @@
 """Load and concatenate all Markdown knowledge base files."""
 
+import os
 from pathlib import Path
 
-DOCS_DIR = Path(__file__).parent.parent.parent.parent / "docs"
+DOCS_DIR = Path(os.getenv("DOCS_DIR", str(Path(__file__).parent.parent.parent.parent / "docs")))
 
 
 def load_knowledge() -> str:

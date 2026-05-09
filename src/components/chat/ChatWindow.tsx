@@ -32,6 +32,20 @@ export default function ChatWindow({
   onSend,
 }: ChatWindowProps) {
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const windowRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        windowRef.current &&
+        !windowRef.current.contains(event.target as Node)
+      ) {
+        onClose();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [onClose]);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -43,6 +57,7 @@ export default function ChatWindow({
 
   return (
     <motion.div
+      ref={windowRef}
       role="dialog"
       aria-label="HappyNest chat assistant"
       initial={{ opacity: 0, y: 16, scale: 0.96 }}
