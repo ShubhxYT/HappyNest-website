@@ -14,25 +14,25 @@ const AREAS: Area[] = [
   {
     title: "Living Area",
     desc: "An expansive living room that seamlessly extends to the outdoor pool area. Comfortably seats up to 15 people, furnished with sofas and equipped with AC, Wi-Fi, TV, a cosy fireplace, and a portable music system.",
-    image: "/images/single/sofa-ground.jpg",
+    image: "/images/single/sofa-ground.webp",
     tag: "Seats 15",
   },
   {
     title: "Dining",
     desc: "Positioned adjacent to the living room, this cosy space seats up to 10 people. The perfect setting for long conversations over home-cooked meals, equipped with AC and TV.",
-    image: "/images/single/main-dining.jpg",
+    image: "/images/single/main-dining.webp",
     tag: "Seats 10",
   },
   {
     title: "Lounge & Game Room",
     desc: "A first-floor lounge featuring a game centre with table tennis and carrom. Seats up to 15 people, equipped with AC, Wi-Fi, TV, and a wired music system — ideal for spirited tournaments.",
-    image: "/images/single/tt-table-sofa-up.jpg",
+    image: "/images/single/tt-table-sofa-up.webp",
     tag: "Seats 15",
   },
   {
     title: "Terrace",
     desc: "A beautiful and expansive private terrace with alfresco seating. Perfect for midnight stargazing and tranquil dewy mornings, offering breathtaking views of the surrounding landscape.",
-    image: "/images/single/main-big-balcony.jpeg",
+    image: "/images/single/main-big-balcony.webp",
     tag: "Alfresco",
   },
 ];

@@ -16,7 +16,7 @@ const AREAS: AreaBlock[] = [
     title: "Living Area",
     description:
       "An expansive living room that seamlessly extends to the outdoor pool area. Comfortably seats up to 15 people, furnished with sofas and equipped with AC, Wi-Fi, TV, a cosy fireplace, and a portable music system.",
-    image: "/images/single/sofa-ground.jpg",
+    image: "/images/single/sofa-ground.webp",
     imageAlt: "Ground floor living area with sofas and fireplace",
     imageFirst: true,
   },
@@ -24,7 +24,7 @@ const AREAS: AreaBlock[] = [
     title: "Dining",
     description:
       "Positioned adjacent to the living room, this cosy space seats up to 10 people. The perfect setting for long conversations over home-cooked meals, equipped with AC and TV.",
-    image: "/images/single/main-dining.jpg",
+    image: "/images/single/main-dining.webp",
     imageAlt: "Dining area with seating for ten guests",
     imageFirst: false,
   },
@@ -32,7 +32,7 @@ const AREAS: AreaBlock[] = [
     title: "Lounge & Game Room",
     description:
       "A first-floor lounge featuring a game centre with table tennis and carrom. Seats up to 15 people, equipped with AC, Wi-Fi, TV, a wired music system. The ideal spot for spirited game tournaments.",
-    image: "/images/single/tt-table-sofa-up.jpg",
+    image: "/images/single/tt-table-sofa-up.webp",
     imageAlt: "First floor lounge with table tennis and seating",
     imageFirst: true,
   },
@@ -40,7 +40,7 @@ const AREAS: AreaBlock[] = [
     title: "Terrace",
     description:
       "A beautiful and expansive private terrace with alfresco seating. Perfect for midnight stargazing and tranquil dewy mornings, offering breathtaking views of the surrounding landscape.",
-    image: "/images/single/main-big-balcony.jpeg",
+    image: "/images/single/main-big-balcony.webp",
     imageAlt: "Expansive private terrace with alfresco seating and views",
     imageFirst: false,
   },

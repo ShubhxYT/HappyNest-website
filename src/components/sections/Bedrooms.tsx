@@ -15,37 +15,37 @@ const ROOMS: Room[] = [
   {
     name: "The Blue Room",
     floor: "Ground Floor",
-    image: "/images/bedrooms/blue1.jpg",
+    image: "/images/bedrooms/blue1.webp",
     desc: "A serene retreat with cool blue tones, a plush king-size bed, and an ensuite bathroom.",
   },
   {
     name: "The Green Room",
     floor: "Ground Floor",
-    image: "/images/bedrooms/green1.jpg",
+    image: "/images/bedrooms/green1.webp",
     desc: "Earthy greens and natural textures bring the outdoors in — features an ensuite jacuzzi.",
   },
   {
     name: "The Grey Room",
     floor: "First Floor",
-    image: "/images/bedrooms/grey1.jpg",
+    image: "/images/bedrooms/grey1.webp",
     desc: "Sophisticated grey tones with private balcony access and an ensuite jacuzzi.",
   },
   {
     name: "The Brown Room",
     floor: "First Floor",
-    image: "/images/bedrooms/brown1.jpg",
+    image: "/images/bedrooms/brown1.webp",
     desc: "Warm browns and rich woods create a cosy, grounded atmosphere with balcony views.",
   },
   {
     name: "The Lime Room",
     floor: "First Floor",
-    image: "/images/bedrooms/lime1.jpg",
+    image: "/images/bedrooms/lime1.webp",
     desc: "Fresh and vibrant lime accents energise this bright, cheerful room with balcony.",
   },
   {
     name: "The Pearl Room",
     floor: "First Floor",
-    image: "/images/bedrooms/grey3.jpg",
+    image: "/images/bedrooms/grey3.webp",
     desc: "The crown jewel — pristine tones, ensuite bathroom, and balcony for the ultimate luxury stay.",
   },
 ];

@@ -12,27 +12,27 @@ interface GardenImage {
 
 const IMAGES: GardenImage[] = [
   {
-    src: "/images/garden/pool1.jpg",
+    src: "/images/garden/pool1.webp",
     alt: "Private swimming pool",
     span: "lg:col-span-2 lg:row-span-2",
   },
   {
-    src: "/images/garden/pool2.jpg",
+    src: "/images/garden/pool2.webp",
     alt: "Pool area",
     span: "",
   },
   {
-    src: "/images/garden/garden.jpg",
+    src: "/images/garden/garden.webp",
     alt: "Garden view",
     span: "",
   },
   {
-    src: "/images/garden/garden2.jpg",
+    src: "/images/garden/garden2.webp",
     alt: "Garden seating",
     span: "",
   },
   {
-    src: "/images/garden/drone-1.jpg",
+    src: "/images/garden/drone-1.webp",
     alt: "Aerial view of property",
     span: "",
   },

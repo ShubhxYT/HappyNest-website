@@ -23,19 +23,19 @@ const EXPERIENCES: Experience[] = [
     icon: Flame,
     title: "Bonfire Nights",
     desc: "Gather around a crackling bonfire under a canopy of stars. Available as an add-on for intimate evenings.",
-    image: "/images/curated/BonfireNights.png",
+    image: "/images/curated/BonfireNights.webp",
   },
   {
     icon: UtensilsCrossed,
     title: "BBQ Evenings",
     desc: "Sizzling barbeque by the lawn — the perfect way to wrap up a day of relaxation.",
-    image: "/images/curated/barbeque.png",
+    image: "/images/curated/barbeque.webp",
   },
   {
     icon: Star,
     title: "Stargazing",
     desc: "The private terrace offers breathtaking views of the night sky, far from city light pollution.",
-    image: "/images/curated/terrace.png",
+    image: "/images/curated/terrace.webp",
   },
   {
     icon: Gamepad2,
@@ -48,13 +48,13 @@ const EXPERIENCES: Experience[] = [
     icon: Coffee,
     title: "Al Fresco Breakfast",
     desc: "Start your morning in the gazebo with a home-cooked breakfast surrounded by the garden's serenity.",
-    image: "/images/curated/breakfast.png",
+    image: "/images/curated/breakfast.webp",
   },
   {
     icon: PartyPopper,
     title: "Private Celebrations",
     desc: "Host birthday parties, anniversaries, or intimate gatherings in a stunning private setting.",
-    image: "/images/curated/private-celeb.png",
+    image: "/images/curated/private-celeb.webp",
   },
 ];
 

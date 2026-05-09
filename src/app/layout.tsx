@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/images/garden/drone-1.jpg",
+        url: "/images/garden/drone-1.webp",
         width: 1200,
         height: 630,
         alt: "Aerial view of HappyNest Blanc Belle villa",

@@ -66,7 +66,7 @@ export default function About() {
           <div className="relative">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.06)]">
               <Image
-                src="/images/garden/drone-2.jpg"
+                src="/images/garden/drone-2.webp"
                 alt="Aerial view of HappyNest Blanc Belle"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
