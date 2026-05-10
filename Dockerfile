@@ -1,20 +1,25 @@
-# ---- Base: install production dependencies ----
-FROM node:20-alpine AS base
-WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci --only=production
+# ---- Dependencies: install ALL deps ----
+FROM node:20-alpine AS deps
 
-# ---- Builder: build the app ----
-FROM node:20-alpine AS builder
 WORKDIR /app
+
 COPY package.json package-lock.json ./
+
 RUN npm ci
+
+# ---- Builder: build Next.js ----
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-ENV NODE_ENV=production
+
 RUN npm run build
 
-# ---- Runner: standalone output ----
+# ---- Runner: lightweight production image ----
 FROM node:20-alpine AS runner
+
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -31,6 +36,6 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT=3000
-ENV HOSTNAME="0.0.0.0"
+ENV HOSTNAME=0.0.0.0
 
 CMD ["node", "server.js"]
