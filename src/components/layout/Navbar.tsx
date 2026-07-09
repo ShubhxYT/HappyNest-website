@@ -12,8 +12,8 @@ const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Spaces", href: "#bedrooms" },
   { label: "Pool & Garden", href: "#pool" },
+  { label: "Virtual Tour", href: "#virtual-tour" },
   { label: "Amenities", href: "#amenities" },
-  { label: "Experiences", href: "#experiences" },
   { label: "Location", href: "#location" },
 ];
 
