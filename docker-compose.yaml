@@ -13,6 +13,7 @@ services:
       - backend
     networks:
       - happynest-network
+      - coolify
     restart: unless-stopped
     labels:
       - caddy=new.happynestfarm.in
@@ -39,3 +40,5 @@ services:
 networks:
   happynest-network:
     driver: bridge
+  coolify:
+    external: true
