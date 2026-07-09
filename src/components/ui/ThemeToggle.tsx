@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sun, Moon } from "@phosphor-icons/react";
 
-function getInitialTheme() {
-  if (typeof window === "undefined") return false;
-  return localStorage.getItem("theme") === "dark";
-}
-
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(getInitialTheme);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsDark(stored === "dark");
+  }, []);
 
   function toggle() {
     const next = !isDark;
