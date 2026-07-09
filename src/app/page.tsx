@@ -7,6 +7,7 @@ import About from "@/components/sections/About";
 import Bedrooms from "@/components/sections/Bedrooms";
 import CommonAreas from "@/components/sections/CommonAreas";
 import PoolGarden from "@/components/sections/PoolGarden";
+import VirtualTour from "@/components/sections/VirtualTour";
 import Amenities from "@/components/sections/Amenities";
 import Meals from "@/components/sections/Meals";
 import Experiences from "@/components/sections/Experiences";
@@ -33,6 +34,7 @@ export default function Home() {
         <Bedrooms />
         <CommonAreas />
         <PoolGarden />
+        <VirtualTour />
         <Amenities />
         <Meals />
         <Experiences />
