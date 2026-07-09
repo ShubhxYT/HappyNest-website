@@ -7,7 +7,7 @@ Cache-Augmented Generation (CAG) chatbot for HappyNest Blanc Belle FAQ.
 ```bash
 cd agent
 uv sync
-# Edit ../.env and add your NVIDIA_API_KEY and OPENROUTER_API_KEY
+# Edit ../.env and add your GOOGLE_API_KEY and OPENROUTER_API_KEY
 ```
 
 ## Usage
@@ -65,8 +65,8 @@ agent/
 
 | Variable | Description |
 |---|---|
-| `NVIDIA_API_KEY` | NVIDIA NIM API key (primary provider) |
-| `OPENROUTER_API_KEY` | OpenRouter API key (fallback to Gemini) |
+| `GOOGLE_API_KEY` | Google Gemini API key (primary provider) |
+| `OPENROUTER_API_KEY` | OpenRouter API key (fallback) |
 
 ## Deployment Notes
 

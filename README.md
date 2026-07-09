@@ -61,7 +61,7 @@ npm start
 ## Running the AI chat agent
 
 The chat widget on the website is powered by a FastAPI service that wraps
-the existing `LLMClient` (OpenRouter primary, NVIDIA NIM fallback) and
+the existing `LLMClient` (Google Gemini primary, OpenRouter fallback) and
 persists every turn to a self-hosted Supabase Postgres.
 
 ### One-time setup

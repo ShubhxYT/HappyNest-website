@@ -12,17 +12,17 @@ load_dotenv(Path(__file__).resolve().parents[3] / ".env")
 class Settings(BaseModel):
     """All external configuration."""
 
-    nvidia_api_key: str = Field(
-        default_factory=lambda: os.getenv("NVIDIA_API_KEY", "")
+    google_api_key: str = Field(
+        default_factory=lambda: os.getenv("GOOGLE_API_KEY", "")
     )
     openrouter_api_key: str = Field(
         default_factory=lambda: os.getenv("OPENROUTER_API_KEY", "")
     )
 
-    nvidia_model: str = "minimaxai/minimax-m2.7"
+    google_model: str = "gemini-2.5-flash-lite"
     openrouter_model: str = "google/gemini-3.1-flash-lite"
 
-    nvidia_base_url: str = "https://integrate.api.nvidia.com/v1"
+    google_base_url: str = "https://generativelanguage.googleapis.com/v1beta/openai/"
     openrouter_base_url: str = "https://openrouter.ai/api/v1"
 
     max_tokens: int = 2048

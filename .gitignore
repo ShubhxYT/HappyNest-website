@@ -17,7 +17,7 @@
 
 # production
 /build
-agent/tests/__pycache__
+__pycache__/
 
 # misc
 .DS_Store
@@ -63,7 +63,9 @@ AGENTS.md
 CLAUDE.md
 
 graphify-out
-agent/src/cag_agent/__pycache__
+
 agent/src/agent
 opencode.jsonc
+
+.kilo
 

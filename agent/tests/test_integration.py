@@ -13,8 +13,8 @@ from cag_agent.llm import LLMClient
     os.getenv("RUN_INTEGRATION_TESTS") != "1",
     reason="Set RUN_INTEGRATION_TESTS=1 to run live API tests",
 )
-def test_real_nvidia_nim():
-    """Ask a simple FAQ question via the real NVIDIA NIM endpoint."""
+def test_real_google():
+    """Ask a simple FAQ question via the real Google Gemini endpoint."""
     client = LLMClient()
     answer = client.ask("What are the check-in timings?")
     assert "2" in answer
@@ -25,11 +25,11 @@ def test_real_nvidia_nim():
     reason="Set RUN_INTEGRATION_TESTS=1 to run live API tests",
 )
 def test_real_openrouter_fallback():
-    """Force fallback by using an invalid NVIDIA key and valid OpenRouter key."""
+    """Force fallback by using an invalid Google key and valid OpenRouter key."""
     from cag_agent.config import Settings
 
     settings = Settings(
-        nvidia_api_key="invalid-key-on-purpose",
+        google_api_key="invalid-key-on-purpose",
         openrouter_api_key=os.getenv("OPENROUTER_API_KEY", ""),
     )
     client = LLMClient(settings=settings)
