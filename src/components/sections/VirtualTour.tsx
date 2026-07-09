@@ -30,10 +30,11 @@ export default function VirtualTour() {
           {active && (
             <button
               onClick={(e) => { e.stopPropagation(); setActive(false); }}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 flex items-center justify-center backdrop-blur-sm transition-colors"
+              className="absolute top-4 right-4 z-10 flex items-center gap-2 px-5 py-2.5 bg-amber-600 hover:bg-amber-700 dark:bg-primary-bright dark:text-surface dark:hover:opacity-90 text-white font-semibold text-xs tracking-[0.12em] uppercase rounded-xl transition-colors duration-200 shadow-lg"
               aria-label="Pause virtual tour"
             >
-              <Pause size={18} weight="fill" className="text-white" />
+              <Pause size={16} weight="fill" />
+              Pause
             </button>
           )}
 
