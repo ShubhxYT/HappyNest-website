@@ -4,7 +4,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 
 export default function VirtualTour() {
   return (
-    <section id="virtual-tour" className="py-24 lg:py-32 bg-stone-50 dark:bg-surface-low">
+    <section id="virtual-tour" className="pt-0 pb-24 lg:pb-32 bg-stone-50 dark:bg-surface-low">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <SectionLabel>360° Tour</SectionLabel>
         <h2 className="font-outfit text-4xl lg:text-5xl font-light text-stone-800 dark:text-on-surface mt-4 mb-16">
@@ -18,8 +18,7 @@ export default function VirtualTour() {
           <iframe
             src="https://tour.happynestfarm.in"
             title="HappyNest Blanc Belle 360° Virtual Tour"
-            className="w-full border-0"
-            style={{ aspectRatio: "16 / 9" }}
+            className="w-full border-0 aspect-[3/4] md:aspect-video"
             allowFullScreen
             loading="lazy"
           />
