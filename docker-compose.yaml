@@ -16,8 +16,9 @@ services:
       - coolify
     restart: unless-stopped
     labels:
-      - caddy=new.happynestfarm.in
+      - caddy=new.happynestfarm.in happynestfarm.in
       - caddy.reverse_proxy={{upstreams 3000}}
+      - caddy_ingress_network=coolify
 
   backend:
     build:
@@ -32,7 +33,7 @@ services:
       - SUPABASE_KEY=${SUPABASE_KEY}
       - CAG_API_HOST=0.0.0.0
       - CAG_API_PORT=8000
-      - CAG_API_CORS_ORIGINS=${CAG_API_CORS_ORIGINS:-http://localhost:3000}
+      - CAG_API_CORS_ORIGINS=${CAG_API_CORS_ORIGINS:-https://new.happynestfarm.in,https://happynestfarm.in,http://localhost:3000}
     networks:
       - happynest-network
     restart: unless-stopped
