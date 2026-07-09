@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import SectionLabel from "@/components/ui/SectionLabel";
-import { Play } from "@phosphor-icons/react";
+import { Play, Pause } from "@phosphor-icons/react";
 
 export default function VirtualTour() {
   const [active, setActive] = useState(false);
@@ -26,6 +26,16 @@ export default function VirtualTour() {
             allowFullScreen
             loading="lazy"
           />
+
+          {active && (
+            <button
+              onClick={(e) => { e.stopPropagation(); setActive(false); }}
+              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 flex items-center justify-center backdrop-blur-sm transition-colors"
+              aria-label="Pause virtual tour"
+            >
+              <Pause size={18} weight="fill" className="text-white" />
+            </button>
+          )}
 
           {!active && (
             <div
