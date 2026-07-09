@@ -53,6 +53,15 @@ export default function VirtualTour() {
               </div>
             </div>
           )}
+
+          <a
+            href="https://tour.happynestfarm.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 px-4 py-2 bg-white/90 hover:bg-white dark:bg-surface/90 dark:hover:bg-surface text-stone-700 dark:text-on-surface font-medium text-xs tracking-wider uppercase rounded-lg shadow-md backdrop-blur-sm transition-colors duration-200"
+          >
+            Open in New Tab
+          </a>
         </div>
       </div>
     </section>
