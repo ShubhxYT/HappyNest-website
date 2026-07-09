@@ -8,7 +8,7 @@ export default function VirtualTour() {
   const [active, setActive] = useState(false);
 
   return (
-    <section id="virtual-tour" className="pt-0 pb-24 lg:pb-32 bg-stone-50 dark:bg-surface-low">
+    <section id="virtual-tour" className="pt-0 pb-24 lg:pb-32 bg-stone-50 dark:bg-surface-low scroll-mt-24">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <SectionLabel>360° Tour</SectionLabel>
         <h2 className="font-outfit text-4xl lg:text-5xl font-light text-stone-800 dark:text-on-surface mt-4 mb-16">

@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/layout/ChatWidget";
+import AgentationWrapper from "@/components/layout/AgentationWrapper";
 
 export const metadata: Metadata = {
   title: "HappyNest — Blanc Belle | Luxury Farm Stay, Sohna",
@@ -94,6 +95,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
+        <AgentationWrapper />
         <ChatWidget />
       </body>
     </html>

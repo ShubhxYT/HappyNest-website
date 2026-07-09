@@ -68,4 +68,5 @@ agent/src/agent
 opencode.jsonc
 
 .kilo
+.playwright-mcp
 
