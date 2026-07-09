@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
     labels:
       - caddy=new.happynestfarm.in
-      - caddy.reverse_proxy={{upstreams}}
+      - caddy.reverse_proxy={{upstreams 3000}}
 
   backend:
     build:
