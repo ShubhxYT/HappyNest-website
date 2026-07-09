@@ -14,6 +14,9 @@ services:
     networks:
       - happynest-network
     restart: unless-stopped
+    labels:
+      - caddy=new.happynestfarm.in
+      - caddy.reverse_proxy={{upstreams}}
 
   backend:
     build:
