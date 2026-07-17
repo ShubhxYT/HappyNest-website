@@ -48,31 +48,57 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "VacationRental",
+  additionalType: "Villa",
+  identifier: "happynest-blanc-belle-sohna-hr",
   name: "HappyNest — Blanc Belle",
   description:
     "A luxury farm stay in Sohna, Haryana with 6 bedrooms, private pool, jacuzzi, and sprawling lawns.",
+  image: [
+    "https://happynestfarm.in/images/garden/drone-1.webp",
+    "https://happynestfarm.in/images/garden/pool1.webp",
+    "https://happynestfarm.in/images/garden/pool2.webp",
+    "https://happynestfarm.in/images/garden/garden.webp",
+    "https://happynestfarm.in/images/bedrooms/blue1.webp",
+    "https://happynestfarm.in/images/bedrooms/green1.webp",
+    "https://happynestfarm.in/images/bathrooms/happy-nest-dc6a2e.jpg",
+    "https://happynestfarm.in/images/single/main-dining.webp",
+  ],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sohna",
     addressRegion: "Haryana",
     addressCountry: "IN",
   },
-  numberOfBedrooms: 6,
-  numberOfBathroomsTotal: 7,
-  occupancy: {
-    "@type": "QuantitativeValue",
-    maxValue: 18,
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 28.234944,
+    longitude: 77.16525,
   },
-  amenityFeature: [
-    { "@type": "LocationFeatureSpecification", name: "Private Swimming Pool" },
-    { "@type": "LocationFeatureSpecification", name: "Outdoor Jacuzzi" },
-    { "@type": "LocationFeatureSpecification", name: "Wi-Fi" },
-    { "@type": "LocationFeatureSpecification", name: "Air Conditioning" },
-    { "@type": "LocationFeatureSpecification", name: "Pet Friendly" },
-  ],
-  checkinTime: "14:00",
-  checkoutTime: "12:00",
-  petsAllowed: true,
+  containsPlace: {
+    "@type": "Accommodation",
+    additionalType: "EntirePlace",
+    numberOfBedrooms: 6,
+    numberOfBathroomsTotal: 7,
+    occupancy: {
+      "@type": "QuantitativeValue",
+      value: 18,
+    },
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "ac", value: true },
+      { "@type": "LocationFeatureSpecification", name: "fireplace", value: true },
+      { "@type": "LocationFeatureSpecification", name: "hotTub", value: true },
+      { "@type": "LocationFeatureSpecification", name: "outdoorGrill", value: true },
+      { "@type": "LocationFeatureSpecification", name: "petsAllowed", value: true },
+      { "@type": "LocationFeatureSpecification", name: "pool", value: true },
+      { "@type": "LocationFeatureSpecification", name: "poolType", value: "Outdoor" },
+      { "@type": "LocationFeatureSpecification", name: "tv", value: true },
+      { "@type": "LocationFeatureSpecification", name: "washerDryer", value: true },
+      { "@type": "LocationFeatureSpecification", name: "wheelchairAccessible", value: true },
+      { "@type": "LocationFeatureSpecification", name: "wifi", value: true },
+    ],
+  },
+  checkinTime: "14:00:00+05:30",
+  checkoutTime: "12:00:00+05:30",
 };
 
 export default function RootLayout({
