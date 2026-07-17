@@ -6,6 +6,7 @@ import ChatWidget from "@/components/layout/ChatWidget";
 import AgentationWrapper from "@/components/layout/AgentationWrapper";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://happynestfarm.in"),
   title: "HappyNest — Blanc Belle | Luxury Farm Stay, Sohna",
   description:
     "A luxury farm stay nestled in the serene embrace of Sohna, Haryana. 6 bedrooms, private pool, jacuzzi, sprawling lawns — the ultimate weekend retreat near New Delhi.",
@@ -34,6 +35,9 @@ export const metadata: Metadata = {
         alt: "Aerial view of HappyNest Blanc Belle villa",
       },
     ],
+  },
+  alternates: {
+    canonical: "/",
   },
   robots: {
     index: true,
