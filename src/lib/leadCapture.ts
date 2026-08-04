@@ -1,11 +1,8 @@
 import type { BookingData } from "./booking";
 
-const API_BASE =
-  process.env.NEXT_PUBLIC_AGENT_API_URL || "http://localhost:8000";
-
 export async function captureLead(data: BookingData): Promise<boolean> {
   try {
-    const res = await fetch(`${API_BASE}/leads`, {
+    const res = await fetch("/api/leads", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

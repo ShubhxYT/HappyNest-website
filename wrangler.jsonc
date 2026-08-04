@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "happynest-site",
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-08-04",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "vpc_services": [
+    {
+      "binding": "AGENT",
+      "service_id": "019fcc3e-058d-7620-8ba2-e2f241115e05",
+      "remote": true
+    }
+  ]
+}
