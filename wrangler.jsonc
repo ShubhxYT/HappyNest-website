@@ -9,6 +9,10 @@
     "binding": "ASSETS",
     "run_worker_first": ["/api/*"]
   },
+  "routes": [
+    { "pattern": "happynestfarm.in", "custom_domain": true },
+    { "pattern": "new.happynestfarm.in", "custom_domain": true }
+  ],
   "vpc_services": [
     {
       "binding": "AGENT",
