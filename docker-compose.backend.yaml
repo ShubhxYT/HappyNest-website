@@ -1,0 +1,51 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: agent/Dockerfile
+    expose:
+      - "8000"
+    environment:
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:?GOOGLE_API_KEY is required}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:?OPENROUTER_API_KEY is required}
+      SUPABASE_URL: ${SUPABASE_URL:?SUPABASE_URL is required}
+      SUPABASE_KEY: ${SUPABASE_KEY:?SUPABASE_KEY is required}
+      CAG_API_HOST: 0.0.0.0
+      CAG_API_PORT: 8000
+      CAG_API_CORS_ORIGINS: ${CAG_API_CORS_ORIGINS:-http://localhost:3000}
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health').read()",
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 15s
+    networks:
+      - agent-vpc
+    restart: unless-stopped
+
+  cloudflared:
+    image: cloudflare/cloudflared:2025.7.0
+    command:
+      [
+        "tunnel",
+        "--no-autoupdate",
+        "run",
+        "--token",
+        "${TUNNEL_TOKEN:?TUNNEL_TOKEN is required}",
+      ]
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - agent-vpc
+    restart: unless-stopped
+
+networks:
+  agent-vpc:
+    driver: bridge
