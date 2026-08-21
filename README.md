@@ -1,104 +1,102 @@
-# HappyNest — Blanc Belle Website
+# HappyNest — live farm-stay website and AI concierge
 
-![HappyNest Preview](./preview.gif)
+[![Live site](https://img.shields.io/badge/live-happynestfarm.in-0f766e)](https://happynestfarm.in)
 
-## The Story
+![HappyNest preview](./public/videos/preview.gif)
 
-My dad owns a beautiful luxury farm stay property in Sohna, Haryana — **HappyNest — Blanc Belle**. It's this stunning white gem nestled in farmland, perfect for weekend getaways with family, friends, and even pets. The property has everything: a gorgeous pool, a jacuzzi, sprawling lawns, game areas, and rooms designed for pure comfort.
+My family had a real luxury farm stay but no technical team, booking funnel, or automated guest-support system. I built and now operate all three.
 
-I decided to build a website for it. Not because I'm a frontend developer (I'm not, lol), but because I wanted to showcase what makes this place special. So I coded it full-stack — Next.js on the frontend, and everything wired up to make it work smoothly.
+HappyNest is a live Next.js property experience with a 91-frame interactive hero, WhatsApp booking flow, and an AI concierge that answers property questions and stores lead context in self-hosted Supabase. The full stack is deployed through infrastructure I operate, with zero recurring hosting cost.
 
----
+## What makes this more than a website
 
-## Documentation
+- **Real business use:** the site presents a working farm stay in Sohna, Haryana and routes interested guests into a WhatsApp booking flow.
+- **AI concierge:** a FastAPI service streams answers with Server-Sent Events and persists chat sessions and lead data.
+- **Simple retrieval by design:** the complete property knowledge base is small enough for cache-augmented generation, avoiding vector-database latency and operational overhead.
+- **Provider resilience:** the LLM client supports a primary provider and fallback path rather than assuming one API is always available.
+- **Owned deployment:** Next.js, the agent service, and Supabase persistence run through self-hosted infrastructure and a repeatable deployment path.
 
-- **[Design System](./docs/DESIGN.md)** - Complete design specifications
-- **[Property Details](./docs/property-details.md)** - Villa specifications and details
-- **[Development Guide](./docs/README.md)** - Development documentation
+## System architecture
 
----
+```mermaid
+flowchart LR
+    Guest["Guest browser"] --> Web["Next.js experience"]
+    Web --> Booking["WhatsApp booking funnel"]
+    Web -->|SSE chat| API["FastAPI concierge"]
+    API --> KB["Property knowledge base"]
+    API --> Router["Primary + fallback LLM routing"]
+    API --> DB["Self-hosted Supabase\nchat sessions + leads"]
+    Deploy["Coolify CI/CD"] --> Web
+    Deploy --> API
+```
+
+## Product experience
+
+- Canvas-scrubbed 91-frame GSAP/ScrollTrigger hero
+- Twelve content sections, responsive layout, and dark/light mode
+- Property catalog, amenities, rooms, experiences, rules, location, and virtual tour
+- WhatsApp booking CTA and event instrumentation
+- Embedded concierge with session persistence and lead capture
+
+## Why CAG instead of a vector database?
+
+The property knowledge base is compact and stable. Injecting the complete curated context keeps the system easier to debug, removes retrieval latency, and avoids another stateful dependency. A vector store would become useful if the catalog grew substantially or required frequent document ingestion; it is unnecessary complexity at the current scale.
 
 ## Deployment
 
-This website is **self-hosted** on our own server. It's live at **[happynestfarm.in](https://happynestfarm.in)** — our own domain, our own infrastructure.
+The public site is available at [happynestfarm.in](https://happynestfarm.in). The application uses a self-hosted deployment path so I retain control over the runtime, database, logs, and provider configuration.
 
-I set it up this way because:
-- Full control over the server and infrastructure
-- No reliance on third-party platforms
-- Direct management of the website
+## Run locally
 
-### Running Locally
+### Prerequisites
 
-If you want to run this project locally for development:
+- Node.js 20+
+- Python 3.12+ and `uv`
+- At least one configured LLM provider
+- Supabase project for persisted chat sessions and leads
+
+### Install and configure
 
 ```bash
-npm install
-npm run dev
+make install
+cp agent/.env.example agent/.env
+cp -n .env.example .env.local
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
+Fill in the provider and Supabase values, then apply the SQL migrations in `agent/supabase/migrations/` through the Supabase SQL editor.
 
-### Building for Production
-
-To build the project for deployment:
+### Start the complete development stack
 
 ```bash
-npm run build
-npm start
+make dev
 ```
 
----
+This starts the FastAPI agent on port `8000` and the Next.js application on port `3000`.
 
-## Built With
-
-- **Next.js** — The React framework for production
-- **TypeScript** — For type safety
-- **Tailwind CSS** — For styling (because why not make it look good?)
-- **Self-hosted infrastructure** — Full control, zero platform lock-in
-
----
-
-## Running the AI chat agent
-
-The chat widget on the website is powered by a FastAPI service that wraps
-the existing `LLMClient` (Google Gemini primary, OpenRouter fallback) and
-persists every turn to a self-hosted Supabase Postgres.
-
-### One-time setup
+Individual commands:
 
 ```bash
-make install                            # uv sync + npm install
-cp agent/.env.example agent/.env        # fill in keys + SUPABASE_*
-cp -n .env.example .env.local           # set AGENT_API_URL=http://localhost:8000
-```
-
-Apply the SQL in `agent/supabase/migrations/001_create_chat_tables.sql`
-to your self-hosted Supabase project (Studio → SQL Editor → Run).
-
-### Run everything in dev
-
-```bash
-make dev          # runs FastAPI (--reload) on :8000 and Next.js on :3000
-```
-
-### Run them individually
-
-```bash
-make agent-server-reload                                    # via Typer command
-# OR raw uvicorn:
-cd agent && uv run uvicorn cag_agent.api:app --reload --port 8000
-
+make agent-server-reload
 make web-dev
-```
-
-### Health check
-
-```bash
 curl http://localhost:8000/health
 ```
 
----
+## Documentation
+
+- [Design system](./docs/DESIGN.md)
+- [Property details](./docs/property-details.md)
+- [Development guide](./docs/README.md)
+- [Agent documentation](./agent/README.md)
+
+## Stack
+
+| Layer | Technology |
+|---|---|
+| Web | Next.js, TypeScript, GSAP, Tailwind CSS |
+| AI API | FastAPI, SSE, provider fallback |
+| Data | Self-hosted Supabase/PostgreSQL |
+| Delivery | Docker, Coolify, private/public ingress |
 
 ## License
 
-MIT — Use it, fork it, build on it. That's the spirit of sharing.
+MIT — use it, fork it, and build on it.
