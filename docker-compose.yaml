@@ -30,7 +30,7 @@ services:
     restart: unless-stopped
 
   cloudflared:
-    image: cloudflare/cloudflared:2025.7.0
+    image: cloudflare/cloudflared:2026.10.1
     command:
       [
         "tunnel",
