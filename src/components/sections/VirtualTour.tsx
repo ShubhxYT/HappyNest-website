@@ -18,14 +18,16 @@ export default function VirtualTour() {
           </span>
         </h2>
 
-        <div className="relative w-full rounded-xl overflow-hidden shadow-lg group">
-          <iframe
-            src="https://tour.happynestfarm.in"
-            title="HappyNest Blanc Belle 360° Virtual Tour"
-            className="w-full border-0 aspect-[3/4] md:aspect-video"
-            allowFullScreen
-            loading="lazy"
-          />
+        <div className="relative w-full rounded-xl overflow-hidden shadow-lg group aspect-[3/4] md:aspect-video bg-stone-900">
+          {active && (
+            <iframe
+              src="https://tour.happynestfarm.in"
+              title="HappyNest Blanc Belle 360° Virtual Tour"
+              className="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; gyroscope; fullscreen; xr-spatial-tracking"
+              allowFullScreen
+            />
+          )}
 
           {active && (
             <button
